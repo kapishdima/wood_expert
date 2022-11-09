@@ -64,7 +64,7 @@ const setupPlugins = () => {
       patterns: [
         {
           from: path.resolve(__dirname, 'src/assets'),
-          to: path.resolve(__dirname, 'dist/assets'),
+          to: path.resolve(__dirname, 'docs/assets'),
         },
       ],
     }),
@@ -81,8 +81,8 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: './index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: isDevelopment ? 'index.[contenthash].js' : 'index.js',
+    path: path.resolve(__dirname, 'docs'),
+    filename: isDevelopment ? 'index.[contenthash].js' : '[name].js',
   },
   optimization: setupOptimization(),
   devServer: setupDevServer(),
