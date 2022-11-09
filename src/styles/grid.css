@@ -75,8 +75,6 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 .row > * {
   box-sizing: border-box;
@@ -95,62 +93,62 @@
 
 .col-1 {
   flex: 0 0 auto;
-  width: 8.33333333%;
+  width: calc(8.33333333% - var(--bs-gutter-x));
 }
 
 .col-2 {
   flex: 0 0 auto;
-  width: 16.66666667%;
+  width: calc(16.66666667% - var(--bs-gutter-x));
 }
 
 .col-3 {
   flex: 0 0 auto;
-  width: 25%;
+  width: calc(25% - var(--bs-gutter-x));
 }
 
 .col-4 {
   flex: 0 0 auto;
-  width: 33.33333333%;
+  width: calc(33.33333333% - var(--bs-gutter-x));
 }
 
 .col-5 {
   flex: 0 0 auto;
-  width: 41.66666667%;
+  width: calc(41.66666667% - var(--bs-gutter-x));
 }
 
 .col-6 {
   flex: 0 0 auto;
-  width: 50%;
+  width: calc(50% - var(--bs-gutter-x));
 }
 
 .col-7 {
   flex: 0 0 auto;
-  width: 58.33333333%;
+  width: calc(58.33333333% - var(--bs-gutter-x));
 }
 
 .col-8 {
   flex: 0 0 auto;
-  width: 66.66666667%;
+  width: calc(66.66666667% - var(--bs-gutter-x));
 }
 
 .col-9 {
   flex: 0 0 auto;
-  width: 75%;
+  width: calc(75% - var(--bs-gutter-x));
 }
 
 .col-10 {
   flex: 0 0 auto;
-  width: 83.33333333%;
+  width: calc(83.33333333% - var(--bs-gutter-x));
 }
 
 .col-11 {
   flex: 0 0 auto;
-  width: 91.66666667%;
+  width: calc(91.66666667% - var(--bs-gutter-x));
 }
 
 .col-12 {
   flex: 0 0 auto;
-  width: 100%;
+  width: calc(100% - var(--bs-gutter-x));
 }
 
 .offset-1 {

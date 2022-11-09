@@ -1,0 +1,42 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 0;
+  border-radius: 20px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  &--outline {
+    background-color: transparent;
+    border: 1px solid $dark-color;
+
+    &:hover {
+      border-color: $accent-color;
+      background-color: $accent-color;
+      color: $white-color;
+    }
+  }
+
+  &--accent {
+    background-color: $accent-color;
+    color: $white-color;
+  }
+
+  &--regular {
+    background-color: $btn-dark-color;
+    color: $white-color;
+
+    &:hover {
+      background-color: $accent-color;
+    }
+  }
+}

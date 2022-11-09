@@ -2,7 +2,13 @@
 @import 'variables';
 
 @import './components/header';
-@import './components/promo';
+@import './components/button';
+@import './components/decorations';
+@import './components/section';
+@import './components/slider';
+
+@import './sections/promo';
+@import './sections/services';
 
 @import './grid.css';
 
