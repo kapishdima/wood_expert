@@ -31,3 +31,17 @@ export const createPortfolioSlider = () => {
     },
   });
 };
+
+export const createReviewSlider = () => {
+  new Swiper('.section-reviews__slider', {
+    width: 1340,
+    loop: true,
+    slidesPerGroup: 1,
+    slidesPerView: 4,
+    spaceBetween: 53,
+    navigation: {
+      prevEl: '[data-el="reviews-prev"]',
+      nextEl: '[data-el="reviews-next"]',
+    },
+  });
+};
