@@ -1,0 +1,17 @@
+import IMask from 'imask';
+
+export const createInputTel = () => {
+  const inputs = document.querySelectorAll('[data-el="input-tel"]');
+  const maskOptions = {
+    mask: '+{38}(000)000-00-00',
+    lazy: false,
+  };
+
+  if (!inputs) {
+    return;
+  }
+
+  inputs.forEach((input) => {
+    const mask = IMask(input, maskOptions);
+  });
+};

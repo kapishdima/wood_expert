@@ -185,11 +185,50 @@
     </div>
 
     <div class="container">
-      <div class="section section-advantages">
+      <section class="section section-about">
+        <img src="./assets/images/about/about-bg.png" alt="" class="section-about__bg" />
+        <div class="row align-items-start justify-content-between">
+          <h2 class="offset-1 section-title">Що нас відрізняє?</h2>
+        </div>
+        <div class="row about-list">
+          <div class="offset-1 col-4 about-item">
+            <div class="about-item__image">
+              <img src="./assets/images/about/about-1.svg" alt="" />
+            </div>
+            <h3 class="about-item__title">
+              Виготовляємо сходи з твердих порід дерева: ясень, бук та дуб
+            </h3>
+          </div>
+          <div class="offset-1 col-4 about-item">
+            <div class="about-item__image">
+              <img src="./assets/images/about/about-3.svg" alt="" />
+            </div>
+            <h3 class="about-item__title">
+              Використовуємо камерну сушку, сходи мають вологість 8-12%
+            </h3>
+          </div>
+          <div class="offset-1 col-4 about-item">
+            <div class="about-item__image">
+              <img src="./assets/images/about/about-2.svg" alt="" />
+            </div>
+            <h3 class="about-item__title">Сходи виключно з екологічної сировини з Карпат</h3>
+          </div>
+          <div class="offset-1 col-4 about-item">
+            <div class="about-item__image">
+              <img src="./assets/images/about/about-4.svg" alt="" />
+            </div>
+            <h3 class="about-item__title">Доставляємо матеріали та монтуємо сходи вчасно</h3>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="section section-portfolio">
+      <div class="container">
         <div class="row align-items-start justify-content-between">
           <h2 class="offset-1 section-title">Портфоліо</h2>
           <div class="slider-navigation">
-            <div class="slider-navigation__btn slider-prev">
+            <div class="slider-navigation__btn slider-prev" data-el="portfolio-prev">
               <svg
                 class="slider-prev__icon"
                 width="18"
@@ -206,7 +245,7 @@
                 <path d="M16.573 8.99976L1.47925 8.99976" stroke="#484740" stroke-linecap="round" />
               </svg>
             </div>
-            <div class="slider-navigation__btn slider-next">
+            <div class="slider-navigation__btn slider-next" data-el="portfolio-next">
               <svg
                 class="slider-prev__icon"
                 width="18"
@@ -226,6 +265,46 @@
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="swiper section-portfolio__slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide portfolio-slide">
+            <img src="./assets/images/portfolio/1/1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide portfolio-slide">
+            <img src="./assets/images/portfolio/5/1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide portfolio-slide">
+            <img src="./assets/images/portfolio/3/1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide portfolio-slide">
+            <img src="./assets/images/portfolio/4/1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide portfolio-slide">
+            <img src="./assets/images/portfolio/5/1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-consultation">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 section-consultation__image">
+            <img src="./assets/images/form-image.jpg" alt="" />
+          </div>
+          <div class="col-4 section-consultation__text">
+            <h3 class="section-consultation__title">Замовити консультацію</h3>
+            <p class="section-consultation__subtitle">
+              Залиште свій номер телефону для зворотнього звязку
+            </p>
+            <form action="" class="section-consultation__form">
+              <input type="text" class="input-tel" data-el="input-tel" />
+              <div class="section-consultation__btn button button--regular">Замовити</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
