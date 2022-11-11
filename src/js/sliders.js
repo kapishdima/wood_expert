@@ -1,7 +1,5 @@
 import Swiper, { Pagination, Navigation, Autoplay, EffectFade } from 'swiper';
 
-import 'swiper/css';
-
 Swiper.use([Pagination, Autoplay, EffectFade, Navigation]);
 
 export const createPromoSlider = () => {
