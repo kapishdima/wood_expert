@@ -1,0 +1,39 @@
+.section {
+  margin-top: 200px;
+
+  &--light {
+    background-color: $white-color;
+  }
+
+  &--dark {
+    background-color: $section-dark-color;
+  }
+}
+
+.section-title {
+  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 34px;
+  letter-spacing: 0.02em;
+
+  color: $dark-color;
+
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 190px;
+    height: 1px;
+
+    background-color: $dark-color;
+  }
+}

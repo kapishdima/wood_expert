@@ -2,7 +2,22 @@
 @import 'variables';
 
 @import './components/header';
-@import './components/promo';
+@import './components/button';
+@import './components/decorations';
+@import './components/section';
+@import './components/slider';
+@import './components/inputs';
+@import './components/menu';
+@import './components/footer';
+
+@import './sections/promo';
+@import './sections/services';
+@import './sections/about';
+@import './sections/portfolio';
+@import './sections/consultation';
+@import './sections/reviews';
+@import './sections/steps';
+@import './sections/price';
 
 @import './grid.css';
 

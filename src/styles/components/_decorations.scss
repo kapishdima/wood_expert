@@ -1,0 +1,12 @@
+.line-decoration {
+  width: 190px;
+  height: 1px;
+
+  &--light {
+    background-color: $white-color;
+  }
+
+  &--dark {
+    background-color: $dark-color;
+  }
+}

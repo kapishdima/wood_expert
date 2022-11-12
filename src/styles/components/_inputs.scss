@@ -1,0 +1,149 @@
+.input-tel {
+  padding-bottom: 4px;
+  padding-left: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid $dark-color;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: $dark-color;
+
+  outline: none;
+}
+
+.field-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+
+  &__label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+
+    color: $dark-color;
+  }
+
+  &__input {
+    padding: 12px 25px;
+
+    background-color: transparent;
+    border: 1px solid $dark-color;
+    border-radius: 10px;
+
+    outline: none;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+
+    color: $dark-color;
+
+    transition: border-color 0.25s ease;
+
+    &:focus {
+      border-color: $accent-color;
+    }
+
+    &::placeholder {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: 0.01em;
+
+      color: $btn-dark-color;
+    }
+  }
+}
+
+.select-field {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 12px 25px;
+
+    background-color: $white-color;
+    border: 1px solid $dark-color;
+    border-radius: 10px;
+
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &__value {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+
+    color: $dark-color;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    padding-top: 8px;
+
+    background: #ffffff;
+    border: 1px solid $dark-color;
+    box-shadow: 0px 4px 10px rgba(72, 71, 64, 0.29);
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    overflow: hidden;
+    opacity: 0;
+
+    transition: opacity 0.25s ease;
+
+    &-item {
+      padding: 11px 25px;
+      background-color: transparent;
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.01em;
+
+      color: $dark-color;
+
+      cursor: pointer;
+      transition: background-color 0.25s ease;
+
+      &:hover {
+        background-color: #f3f2ef;
+      }
+    }
+  }
+}
+
+.select-field--opened {
+  .select-field__dropdown {
+    opacity: 1;
+    z-index: 1;
+  }
+}
