@@ -80,6 +80,16 @@
     overflow: hidden;
     cursor: pointer;
 
+    &.selected {
+      &::before {
+        height: 110%;
+      }
+
+      .price-slide__item-btn {
+        opacity: 1;
+      }
+    }
+
     &:hover {
       &::before {
         height: 110%;
@@ -204,10 +214,22 @@
         transition: background-color 0.25s ease, height 0.25s ease;
       }
 
+      .price-steps__icon {
+        .icon-item {
+          transition: fill 0.25s ease;
+        }
+      }
+
       &.active {
         &:before {
           height: 3px;
           background-color: $accent-color;
+        }
+
+        .price-steps__icon {
+          .icon-item {
+            fill: $accent-color;
+          }
         }
       }
     }
@@ -217,6 +239,80 @@
       left: 50%;
 
       transform: translateX(-50%);
+    }
+  }
+
+  // Price form
+
+  .price-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  .price-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      transform: scale(0) translateY(0);
+      opacity: 0;
+      will-change: transform;
+
+      transition: transform 0.5s ease, opacity 0.55s ease;
+
+      &-bg {
+        position: absolute;
+        width: 100%;
+      }
+
+      &-item {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        letter-spacing: 0.01em;
+
+        color: $dark-color;
+      }
+
+      &-plus {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 47px;
+
+        color: $accent-color;
+      }
+    }
+
+    &__top {
+      will-change: transform;
+      transition: transform 0.5s ease;
+    }
+
+    &__bottom {
+      margin-top: 3px;
+    }
+  }
+
+  .price-box.active {
+    .price-box__top {
+      transform: translateY(-280%) rotate(10deg);
+    }
+
+    .price-box__text {
+      opacity: 1;
+      transform: scale(1) translateY(-80%);
     }
   }
 }
