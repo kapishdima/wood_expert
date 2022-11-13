@@ -64,7 +64,6 @@ const initForm = () => {
 
   selectEls.forEach((selectEl) => {
     createSelect(selectEl, (field, value) => {
-      console.log(field, value);
       orderData.contact[field] = value;
     });
   });

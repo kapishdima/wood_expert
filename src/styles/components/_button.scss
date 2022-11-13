@@ -40,3 +40,26 @@
     }
   }
 }
+
+.button-circle {
+  width: 192px;
+  height: 192px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid $white-color;
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: $white-color;
+  }
+}
