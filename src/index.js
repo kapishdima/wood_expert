@@ -5,6 +5,8 @@ import { createSelects } from './js/select';
 
 import 'swiper/css';
 import './styles/index.scss';
+import { createGallery, createGallerySlider } from './js/gallery';
+import { createModals } from './js/modal';
 
 document.addEventListener('DOMContentLoaded', () => {
   createPromoSlider();
@@ -12,4 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   createReviewSlider();
   createPriceCalculator();
   createInputTel();
+
+  // createGallerySlider();
+  // createModals();
+  createGallery();
 });
