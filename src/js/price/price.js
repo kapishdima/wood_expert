@@ -10,11 +10,12 @@ const orderData = {
   wood: null,
   railing: null,
   contact: new Proxy(
-    { name: null, messanger: null, phone: null },
+    { name: null, messanger: 'Viber', location: 'Львівська (область)', phone: null },
     {
       set: (obj, prop, value) => {
+        Reflect.set(obj, prop, value);
         renderActiveBox();
-        return Reflect.set(obj, prop, value);
+        return true;
       },
     },
   ),
@@ -152,5 +153,6 @@ const renderActiveBox = () => {
     submitButtonEl.classList.remove('slider-finish--disabled');
   } else {
     boxEl.classList.remove('active');
+    submitButtonEl.classList.add('slider-finish--disabled');
   }
 };

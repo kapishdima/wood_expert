@@ -1,12 +1,10 @@
 import { createInputTel } from './js/inputs';
 import { createPromoSlider, createPortfolioSlider, createReviewSlider } from './js/sliders';
 import { createPriceCalculator } from './js/price/price';
-import { createSelects } from './js/select';
+import { createGallery } from './js/gallery';
 
 import 'swiper/css';
 import './styles/index.scss';
-import { createGallery, createGallerySlider } from './js/gallery';
-import { createModals } from './js/modal';
 
 document.addEventListener('DOMContentLoaded', () => {
   createPromoSlider();
@@ -15,7 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
   createPriceCalculator();
   createInputTel();
 
-  // createGallerySlider();
-  // createModals();
   createGallery();
 });
