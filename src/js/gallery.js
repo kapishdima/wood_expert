@@ -4,7 +4,7 @@ import Micromodal from 'micromodal';
 Swiper.use([Pagination, Autoplay, EffectFade, Navigation]);
 
 const createGallerySlider = () => {
-  const swiper = new Swiper('[data-el="gallery-slider"]', {
+  new Swiper('[data-el="gallery-slider"]', {
     navigation: {
       nextEl: '[data-el="gallery-next"]',
       prevEl: '[data-el="gallery-prev"]',
