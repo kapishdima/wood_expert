@@ -6,6 +6,10 @@
     position: relative;
     margin-left: 97px;
 
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -19,6 +23,10 @@
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 99.79%);
       border-radius: 20px;
       transform: rotate(270deg);
+
+      @media screen and (max-width: 768px) {
+        content: none;
+      }
     }
 
     .portfolio-slide {

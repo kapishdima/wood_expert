@@ -6,153 +6,262 @@
     <title>Webpack Test</title>
   </head>
   <body>
-    <div class="container">
-      <div class="header-top row">
-        <div class="col-3">
-          <a href="/" class="header-logo">
-            <img src="./assets/images/logo.svg" alt="Wood Expert" />
-          </a>
-        </div>
-        <div class="col-9">
-          <nav class="header-top__menu menu">
-            <a href="#" class="header-top__menu-item menu-item">Ми пропонуємо</a>
-            <a href="#" class="header-top__menu-item menu-item">Сходи з нуля</a>
-            <a href="#" class="header-top__menu-item menu-item">Портфоліо</a>
-            <a href="#" class="header-top__menu-item menu-item">Схема роботи</a>
-            <a href="#" class="header-top__menu-item menu-item">Контакти</a>
-          </nav>
-          <div class="header-top__social">
-            <a href="#" class="header-top__social-item">
-              <img src="./assets/images/viber-icon.svg" alt="" />
-            </a>
-            <a href="#" class="header-top__social-item">
-              <img src="./assets/images/telegram-icon.svg" alt="" />
-            </a>
-            <a href="#" class="header-top__social-item">
-              <img src="./assets/images/tel-icon.svg" alt="" />
+    <div class="header">
+      <div class="container">
+        <div class="header-top row">
+          <div class="col-5 col-md-3">
+            <a href="/" class="header-logo offset-2 offset-md-0">
+              <svg
+                width="211"
+                height="31"
+                viewBox="0 0 211 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M63.7953 4.96738L59.4318 25.0278H55.6254L51.6649 8.22871L47.6684 25.0278H43.9608L39.5973 4.96738H42.4977L45.9628 22.6112L50.1068 4.96738H53.2575L57.4965 22.6172L61.0823 4.97337L63.7953 4.96738Z"
+                  fill="#484740"
+                />
+                <path
+                  d="M77.1943 11.4331C78.4258 12.8586 79.0415 14.7928 79.0415 17.2359C79.0415 18.8134 78.7619 20.2037 78.2029 21.4066C77.6971 22.5489 76.8544 23.5226 75.7794 24.2065C74.7179 24.8677 73.459 25.1984 72.0026 25.1984C69.786 25.1984 68.062 24.4856 66.8305 23.0602C65.5991 21.6347 64.9809 19.7008 64.976 17.2585C64.976 15.681 65.2551 14.2908 65.8134 13.0878C66.3195 11.9457 67.1622 10.9721 68.2368 10.288C69.2951 9.62432 70.5618 9.29211 72.0371 9.29132C74.2495 9.29528 75.9686 10.0092 77.1943 11.4331ZM67.9327 17.2644C67.9327 21.1322 69.2873 23.0661 71.9964 23.0661C74.7056 23.0661 76.0602 21.1227 76.0602 17.2359C76.0602 13.3682 74.7134 11.4339 72.0198 11.4331C69.2951 11.4331 67.9327 13.3769 67.9327 17.2644Z"
+                  fill="#484740"
+                />
+                <path
+                  d="M94.6697 11.4331C95.9011 12.8586 96.5148 14.7928 96.5107 17.2359C96.5107 18.8134 96.2312 20.2037 95.6721 21.4066C95.1667 22.5492 94.3239 23.5229 93.2486 24.2065C92.1912 24.8677 90.9343 25.1984 89.4779 25.1984C87.2614 25.1984 85.5373 24.4856 84.3059 23.0602C83.0745 21.6347 82.4563 19.7008 82.4514 17.2585C82.4514 15.681 82.7305 14.2908 83.2887 13.0878C83.7953 11.9456 84.6384 10.9721 85.7134 10.288C86.77 9.62432 88.0368 9.29211 89.5137 9.29132C91.7245 9.29528 93.4432 10.0092 94.6697 11.4331ZM85.4093 17.2644C85.4093 21.1322 86.7639 23.0661 89.473 23.0661C92.1822 23.0661 93.5405 21.1239 93.5478 17.2395C93.5478 13.3717 92.2015 11.4374 89.5087 11.4367C86.7749 11.4343 85.4085 13.3769 85.4093 17.2644Z"
+                  fill="#484740"
+                />
+                <path
+                  d="M113.268 3.52407V24.8562H110.845L110.575 22.7489C110.085 23.4915 109.418 24.1102 108.629 24.5533C107.837 24.9883 106.938 25.211 106.026 25.1983C104.151 25.1983 102.69 24.4856 101.642 23.0601C100.595 21.6347 100.071 19.7222 100.072 17.3226C100.072 15.7641 100.321 14.3782 100.819 13.165C101.318 11.9518 102.036 11.0038 102.975 10.3212C103.922 9.6345 105.081 9.27361 106.266 9.29604C107.882 9.29604 109.298 9.92166 110.515 11.1729V3.20691L113.268 3.52407ZM108.78 22.5303C109.378 22.155 109.956 21.5919 110.515 20.8412V13.3966C110.065 12.8034 109.501 12.2986 108.855 11.9094C108.251 11.5693 107.563 11.3947 106.865 11.4045C105.647 11.4045 104.703 11.8955 104.032 12.8775C103.362 13.8595 103.027 15.3218 103.03 17.2644C103.03 19.2276 103.339 20.6903 103.958 21.6525C104.577 22.6147 105.465 23.0958 106.621 23.0958C107.462 23.0958 108.182 22.9081 108.78 22.5327V22.5303Z"
+                  fill="#484740"
+                />
+                <path
+                  d="M138.195 4.96738L137.865 7.16141H129.875V13.6568H136.818V15.8496H129.875V22.6622H138.434V24.8562H127.033V4.96738H138.195Z"
+                  fill="#484740"
+                />
+                <path
+                  d="M148.935 16.7156L154.412 24.8562H151.087L147.226 18.419L143.307 24.8562H140.194L145.701 16.832L140.823 9.64407H144.054L147.346 15.2153L150.671 9.64407H153.784L148.935 16.7156Z"
+                  fill="#484740"
+                />
+                <path
+                  d="M169.076 11.376C170.016 12.7611 170.486 14.7156 170.486 17.2394C170.486 19.6255 169.947 21.5499 168.869 23.0126C167.791 24.4753 166.264 25.2039 164.288 25.1983C162.532 25.1983 161.155 24.621 160.158 23.4664V30.6828L157.405 31V9.64407H159.772L159.981 11.6932C160.526 10.9524 161.243 10.3447 162.075 9.91848C162.867 9.51088 163.751 9.29753 164.649 9.29721C166.662 9.29721 168.137 9.99015 169.076 11.376ZM167.519 17.2394C167.519 13.3527 166.332 11.4089 163.958 11.4081C163.194 11.4039 162.449 11.6367 161.834 12.0721C161.173 12.5376 160.605 13.1148 160.158 13.7756V21.1939C160.529 21.7651 161.043 22.2366 161.654 22.5648C162.258 22.8826 162.936 23.0462 163.624 23.0399C166.221 23.0383 167.519 21.1048 167.519 17.2394Z"
+                  fill="#484740"
+                />
+                <path
+                  d="M187.029 18.1589H176.975C177.095 19.8338 177.534 21.0656 178.292 21.8544C179.049 22.6432 180.027 23.0391 181.224 23.0423C181.935 23.0495 182.643 22.9423 183.317 22.7251C184.029 22.4765 184.704 22.1364 185.322 21.7142L186.519 23.3024C184.844 24.5695 183.009 25.2031 181.013 25.2031C178.819 25.2031 177.108 24.5101 175.882 23.1243C174.655 21.7384 174.042 19.8334 174.041 17.4093C174.041 15.831 174.305 14.4309 174.834 13.2089C175.363 11.987 176.121 11.0296 177.108 10.3366C178.093 9.64368 179.256 9.29721 180.595 9.29721C182.689 9.29721 184.295 9.96124 185.412 11.2893C186.529 12.6174 187.088 14.455 187.088 16.8023C187.089 17.2458 187.069 17.698 187.029 18.1589ZM184.366 16.0207C184.366 14.5208 184.057 13.376 183.438 12.5865C182.819 11.7969 181.891 11.401 180.655 11.3986C178.401 11.3986 177.175 12.9959 176.975 16.1905H184.364L184.366 16.0207Z"
+                  fill="#484740"
+                />
+                <path
+                  d="M199.896 9.47067L199.388 12.0686C198.938 11.9567 198.475 11.8985 198.011 11.8952C197.035 11.8952 196.247 12.2416 195.648 12.9346C195.048 13.6275 194.58 14.7061 194.241 16.1704V24.8586H191.488V9.6441H193.852L194.121 12.7326C194.54 11.597 195.109 10.7405 195.827 10.1632C196.529 9.59131 197.422 9.28372 198.341 9.29724C198.865 9.29347 199.387 9.35171 199.896 9.47067Z"
+                  fill="#484740"
+                />
+                <path
+                  d="M211 24.1637C209.964 24.8562 208.73 25.2195 207.469 25.2031C206.132 25.2031 205.09 24.8325 204.343 24.0912C203.596 23.35 203.221 22.2773 203.22 20.8732V11.6932H200.468V9.64409H203.22V6.20871L205.973 5.89154V9.64409H209.714L209.414 11.6932H205.973V20.758C205.973 21.5499 206.118 22.1221 206.407 22.4745C206.696 22.8269 207.18 23.0051 207.859 23.0091C208.477 23.0091 209.175 22.8067 209.952 22.402L211 24.1637Z"
+                  fill="#484740"
+                />
+                <path
+                  d="M11.3946 21.5762L0 9.26871L0.180695 8.9855C0.592476 8.34009 1.17908 7.8249 1.87224 7.49988L2.31391 7.29279L13.7099 19.6003L11.3946 21.5762Z"
+                  fill="#484740"
+                />
+                <path
+                  d="M19.6425 26.1364L17.3286 24.1605L28.7218 11.853L28.7683 11.8764C29.6728 12.3314 30.4515 13.0019 31.0357 13.8289L19.6425 26.1364Z"
+                  fill="#484740"
+                />
+                <mask
+                  id="mask0_241_814"
+                  style="mask-type: alpha"
+                  maskUnits="userSpaceOnUse"
+                  x="5"
+                  y="0"
+                  width="21"
+                  height="31"
+                >
+                  <rect x="5.9353" width="19.26" height="31" rx="4" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_241_814)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.95834 -0.791962H9.05486V13.0992L5.95834 9.70231V-0.791962ZM5.95834 11.2276V35.4103H9.05486V14.5727L5.95834 11.2276Z"
+                    fill="#484740"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.3227 -1.04202H14.4192V26.4093L11.3227 23.0125V-1.04202ZM11.3227 24.5369V33.6558H14.4192V27.8825L11.3227 24.5369Z"
+                    fill="#484740"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M22.0527 -0.791962H25.1492V14.231L22.0527 17.576V-0.791962ZM22.0527 19.128V35.4103H25.1492V15.7871L22.0527 19.128Z"
+                    fill="#484740"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M16.6884 -1.04202H19.7849V7.35424L16.6884 10.6987V-1.04202ZM16.6884 12.2506V33.6558H19.7849V8.91029L16.6884 12.2506Z"
+                    fill="#484740"
+                  />
+                </g>
+              </svg>
             </a>
           </div>
-          <div class="header-top__btn button button--outline">Замовити консультацію</div>
+          <div class="col-9 d-none d-md-flex">
+            <nav class="header-top__menu menu">
+              <a href="#" class="header-top__menu-item menu-item">Ми пропонуємо</a>
+              <a href="#" class="header-top__menu-item menu-item">Сходи з нуля</a>
+              <a href="#" class="header-top__menu-item menu-item">Портфоліо</a>
+              <a href="#" class="header-top__menu-item menu-item">Схема роботи</a>
+              <a href="#" class="header-top__menu-item menu-item">Контакти</a>
+            </nav>
+            <div class="header-top__social">
+              <a href="#" class="header-top__social-item">
+                <img src="./assets/images/viber-icon.svg" alt="" />
+              </a>
+              <a href="#" class="header-top__social-item">
+                <img src="./assets/images/telegram-icon.svg" alt="" />
+              </a>
+              <a href="#" class="header-top__social-item">
+                <img src="./assets/images/tel-icon.svg" alt="" />
+              </a>
+            </div>
+            <div class="header-top__btn button button--outline">Замовити консультацію</div>
+          </div>
+          <div class="col-1 d-flex d-md-none">
+            <div class="header-mobile__btn">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
         </div>
+
+        <section class="section-promo">
+          <div class="swiper section-promo__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="promo-slide">
+                  <img
+                    class="promo-slide__image"
+                    src="./assets/images/header-slider/slider-1.jpg"
+                    alt=""
+                  />
+                  <div class="offset-1 promo-slide__content">
+                    <h1 class="promo-slide__title">Виготовлення сходів</h1>
+                    <h2 class="promo-slide__subtitle">за німецькою технологією</h2>
+                    <div
+                      class="promo-slide__decoration line-decoration line-decoration--light"
+                    ></div>
+                    <ul class="promo-slide__list">
+                      <li class="promo-slide__list-item">Працюємо у Львові та Одесі</li>
+                      <li class="promo-slide__list-item">Заміри та прорахунок безкоштовно</li>
+                      <li class="promo-slide__list-item">Гарантія 12 років</li>
+                    </ul>
+                    <div class="promo-slide__btn button button--regular">Розрахувати вартість</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="promo-slide">
+                  <img
+                    class="promo-slide__image"
+                    src="./assets/images/header-slider/slider-2.jpg"
+                    alt=""
+                  />
+                  <div class="offset-1 promo-slide__content">
+                    <h1 class="promo-slide__title">Виготовлення сходів</h1>
+                    <h2 class="promo-slide__subtitle">за німецькою технологією</h2>
+                    <div
+                      class="promo-slide__decoration line-decoration line-decoration--light"
+                    ></div>
+                    <ul class="promo-slide__list">
+                      <li class="promo-slide__list-item">Працюємо у Львові та Одесі</li>
+                      <li class="promo-slide__list-item">Заміри та прорахунок безкоштовно</li>
+                      <li class="promo-slide__list-item">Гарантія 12 років</li>
+                    </ul>
+                    <div class="promo-slide__btn button button--regular">Розрахувати вартість</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="promo-slide">
+                  <img
+                    class="promo-slide__image"
+                    src="./assets/images/header-slider/slider-3.jpg"
+                    alt=""
+                  />
+                  <div class="offset-1 promo-slide__content">
+                    <h1 class="promo-slide__title">Виготовлення сходів</h1>
+                    <h2 class="promo-slide__subtitle">за німецькою технологією</h2>
+                    <div
+                      class="promo-slide__decoration line-decoration line-decoration--light"
+                    ></div>
+                    <ul class="promo-slide__list">
+                      <li class="promo-slide__list-item">Працюємо у Львові та Одесі</li>
+                      <li class="promo-slide__list-item">Заміри та прорахунок безкоштовно</li>
+                      <li class="promo-slide__list-item">Гарантія 12 років</li>
+                    </ul>
+                    <div class="promo-slide__btn button button--regular">Розрахувати вартість</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="promo-slide">
+                  <img
+                    class="promo-slide__image"
+                    src="./assets/images/header-slider/slider-4.jpg"
+                    alt=""
+                  />
+                  <div class="offset-1 promo-slide__content">
+                    <h1 class="promo-slide__title">Виготовлення сходів</h1>
+                    <h2 class="promo-slide__subtitle">за німецькою технологією</h2>
+                    <div
+                      class="promo-slide__decoration line-decoration line-decoration--light"
+                    ></div>
+                    <ul class="promo-slide__list">
+                      <li class="promo-slide__list-item">Працюємо у Львові та Одесі</li>
+                      <li class="promo-slide__list-item">Заміри та прорахунок безкоштовно</li>
+                      <li class="promo-slide__list-item">Гарантія 12 років</li>
+                    </ul>
+                    <div class="promo-slide__btn button button--regular">Розрахувати вартість</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="promo-slide">
+                  <img
+                    class="promo-slide__image"
+                    src="./assets/images/header-slider/slider-5.jpg"
+                    alt=""
+                  />
+                  <div class="offset-1 promo-slide__content">
+                    <h1 class="promo-slide__title">Виготовлення сходів</h1>
+                    <h2 class="promo-slide__subtitle">за німецькою технологією</h2>
+                    <div
+                      class="promo-slide__decoration line-decoration line-decoration--light"
+                    ></div>
+                    <ul class="promo-slide__list">
+                      <li class="promo-slide__list-item">Працюємо у Львові та Одесі</li>
+                      <li class="promo-slide__list-item">Заміри та прорахунок безкоштовно</li>
+                      <li class="promo-slide__list-item">Гарантія 12 років</li>
+                    </ul>
+                    <div class="promo-slide__btn button button--regular">Розрахувати вартість</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
       </div>
     </div>
 
-    <section class="section-promo">
-      <div class="container">
-        <div class="swiper section-promo__slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="promo-slide">
-                <img
-                  class="promo-slide__image"
-                  src="./assets/images/header-slider/slider-1.jpg"
-                  alt=""
-                />
-                <div class="offset-1 promo-slide__content">
-                  <h1 class="promo-slide__title">Виготовлення сходів</h1>
-                  <h2 class="promo-slide__subtitle">за німецькою технологією</h2>
-                  <div class="promo-slide__decoration line-decoration line-decoration--light"></div>
-                  <ul class="promo-slide__list">
-                    <li class="promo-slide__list-item">Працюємо у Львові та Одесі</li>
-                    <li class="promo-slide__list-item">Заміри та прорахунок безкоштовно</li>
-                    <li class="promo-slide__list-item">Гарантія 12 років</li>
-                  </ul>
-                  <div class="promo-slide__btn button button--regular">Розрахувати вартість</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="promo-slide">
-                <img
-                  class="promo-slide__image"
-                  src="./assets/images/header-slider/slider-2.jpg"
-                  alt=""
-                />
-                <div class="offset-1 promo-slide__content">
-                  <h1 class="promo-slide__title">Виготовлення сходів</h1>
-                  <h2 class="promo-slide__subtitle">за німецькою технологією</h2>
-                  <div class="promo-slide__decoration line-decoration line-decoration--light"></div>
-                  <ul class="promo-slide__list">
-                    <li class="promo-slide__list-item">Працюємо у Львові та Одесі</li>
-                    <li class="promo-slide__list-item">Заміри та прорахунок безкоштовно</li>
-                    <li class="promo-slide__list-item">Гарантія 12 років</li>
-                  </ul>
-                  <div class="promo-slide__btn button button--regular">Розрахувати вартість</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="promo-slide">
-                <img
-                  class="promo-slide__image"
-                  src="./assets/images/header-slider/slider-3.jpg"
-                  alt=""
-                />
-                <div class="offset-1 promo-slide__content">
-                  <h1 class="promo-slide__title">Виготовлення сходів</h1>
-                  <h2 class="promo-slide__subtitle">за німецькою технологією</h2>
-                  <div class="promo-slide__decoration line-decoration line-decoration--light"></div>
-                  <ul class="promo-slide__list">
-                    <li class="promo-slide__list-item">Працюємо у Львові та Одесі</li>
-                    <li class="promo-slide__list-item">Заміри та прорахунок безкоштовно</li>
-                    <li class="promo-slide__list-item">Гарантія 12 років</li>
-                  </ul>
-                  <div class="promo-slide__btn button button--regular">Розрахувати вартість</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="promo-slide">
-                <img
-                  class="promo-slide__image"
-                  src="./assets/images/header-slider/slider-4.jpg"
-                  alt=""
-                />
-                <div class="offset-1 promo-slide__content">
-                  <h1 class="promo-slide__title">Виготовлення сходів</h1>
-                  <h2 class="promo-slide__subtitle">за німецькою технологією</h2>
-                  <div class="promo-slide__decoration line-decoration line-decoration--light"></div>
-                  <ul class="promo-slide__list">
-                    <li class="promo-slide__list-item">Працюємо у Львові та Одесі</li>
-                    <li class="promo-slide__list-item">Заміри та прорахунок безкоштовно</li>
-                    <li class="promo-slide__list-item">Гарантія 12 років</li>
-                  </ul>
-                  <div class="promo-slide__btn button button--regular">Розрахувати вартість</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="promo-slide">
-                <img
-                  class="promo-slide__image"
-                  src="./assets/images/header-slider/slider-5.jpg"
-                  alt=""
-                />
-                <div class="offset-1 promo-slide__content">
-                  <h1 class="promo-slide__title">Виготовлення сходів</h1>
-                  <h2 class="promo-slide__subtitle">за німецькою технологією</h2>
-                  <div class="promo-slide__decoration line-decoration line-decoration--light"></div>
-                  <ul class="promo-slide__list">
-                    <li class="promo-slide__list-item">Працюємо у Львові та Одесі</li>
-                    <li class="promo-slide__list-item">Заміри та прорахунок безкоштовно</li>
-                    <li class="promo-slide__list-item">Гарантія 12 років</li>
-                  </ul>
-                  <div class="promo-slide__btn button button--regular">Розрахувати вартість</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-
-    <div class="container">
+    <div class="container d-none d-md-block">
       <section class="section section-light section-services">
         <div class="row align-items-start justify-content-between">
           <h2 class="offset-1 section-title">Ми пропонуємо</h2>
@@ -190,6 +299,66 @@
       </section>
     </div>
 
+    <section class="section section-light section-services d-block d-md-none">
+      <div class="container">
+        <div class="row align-items-start justify-content-between">
+          <h2 class="offset-1 section-title">Ми пропонуємо</h2>
+        </div>
+      </div>
+
+      <div class="swiper section-services__slider">
+        <div class="swiper-wrapper">
+          <div class="col-10 swiper-slide">
+            <div class="service-item">
+              <img
+                src="./assets/images/services/service-1.jpg"
+                alt=""
+                class="service-item__image"
+              />
+              <div class="service-item__info">
+                <p class="service-item__info-text">Обшивка бетонного каркасу</p>
+              </div>
+              <div class="service-item__btn button-circle">
+                <span class="button-circle__text">Дізнатися вартість</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-10 swiper-slide">
+            <div class="service-item">
+              <img
+                src="./assets/images/services/service-2.jpg"
+                alt=""
+                class="service-item__image"
+              />
+              <div class="service-item__info">
+                <p class="service-item__info-text">Обшивка бетонного каркасу</p>
+              </div>
+              <div class="service-item__btn button-circle">
+                <span class="button-circle__text">Дізнатися вартість</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-10 swiper-slide">
+            <div class="service-item">
+              <img
+                src="./assets/images/services/service-3.jpg"
+                alt=""
+                class="service-item__image"
+              />
+              <div class="service-item__info">
+                <p class="service-item__info-text">Обшивка бетонного каркасу</p>
+              </div>
+              <div class="service-item__btn button-circle">
+                <span class="button-circle__text">Дізнатися вартість</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="container">
       <section class="section section-about">
         <img src="./assets/images/about/about-bg.png" alt="" class="section-about__bg" />
@@ -197,7 +366,7 @@
           <h2 class="offset-1 section-title">Що нас відрізняє?</h2>
         </div>
         <div class="row about-list">
-          <div class="offset-1 col-4 about-item">
+          <div class="offset-1 col-10 col-md-4 about-item">
             <div class="about-item__image">
               <img src="./assets/images/about/about-1.svg" alt="" />
             </div>
@@ -205,7 +374,7 @@
               Виготовляємо сходи з твердих порід дерева: ясень, бук та дуб
             </h3>
           </div>
-          <div class="offset-1 col-4 about-item">
+          <div class="offset-1 col-10 col-md-4 about-item">
             <div class="about-item__image">
               <img src="./assets/images/about/about-3.svg" alt="" />
             </div>
@@ -213,13 +382,13 @@
               Використовуємо камерну сушку, сходи мають вологість 8-12%
             </h3>
           </div>
-          <div class="offset-1 col-4 about-item">
+          <div class="offset-1 col-10 col-md-4 about-item">
             <div class="about-item__image">
               <img src="./assets/images/about/about-2.svg" alt="" />
             </div>
             <h3 class="about-item__title">Сходи виключно з екологічної сировини з Карпат</h3>
           </div>
-          <div class="offset-1 col-4 about-item">
+          <div class="offset-1 col-10 col-md-4 about-item">
             <div class="about-item__image">
               <img src="./assets/images/about/about-4.svg" alt="" />
             </div>
@@ -527,11 +696,11 @@
 
     <section class="section section-consultation">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-8 section-consultation__image">
+        <div class="section-consultation__row">
+          <div class="col-12 col-md-8 section-consultation__image">
             <img src="./assets/images/form-image.jpg" alt="" />
           </div>
-          <div class="col-4 section-consultation__text">
+          <div class="col-8 col-md-4 offset-1 offset-md-0 section-consultation__text">
             <h3 class="section-consultation__title">Замовити консультацію</h3>
             <p class="section-consultation__subtitle">
               Залиште свій номер телефону для зворотнього звязку
@@ -554,11 +723,16 @@
 
         <div class="section-steps__content">
           <img
-            class="offset-1 section-steps__image"
+            class="offset-1 section-steps__image d-none d-md-block"
             src="./assets/images/steps/steps-image.svg"
             alt=""
           />
-          <div class="col-5 steps--left">
+          <img
+            class="offset-1 section-steps__image d-block d-md-none"
+            src="./assets/images/steps/steps-image-mobile.svg"
+            alt=""
+          />
+          <div class="col-7 col-md-5 steps--left offset-1 offset-md-0">
             <div class="step-item">
               <div class="step-item__number">1</div>
               <div class="step-item__info">
@@ -588,7 +762,7 @@
             </div>
           </div>
 
-          <div class="col-5 offset-7 steps--right">
+          <div class="col-7 col-md-5 offset-1 offset-md-7 steps--right">
             <div class="step-item">
               <div class="step-item__number">4</div>
               <div class="step-item__info">
@@ -628,7 +802,7 @@
       <div class="container">
         <div class="row align-items-start justify-content-between">
           <h4 class="offset-1 section-title">Розрахунок вартості</h4>
-          <div class="col-5 price-steps">
+          <div class="offset-1 offset-md-0 col-11 col-md-5 price-steps">
             <span class="price-steps__title">Этап <span data-el="step-counter">0</span> / 5</span>
             <div class="price-steps__item" data-el="step-pagination"></div>
             <div class="price-steps__item" data-el="step-pagination"></div>
@@ -674,11 +848,14 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="price-slide">
-                <div class="offset-1 col-2 price-slide-tool">
+                <div class="offset-1 col-10 col-md-2 price-slide-tool">
                   <h4 class="section-price__title">
                     Дайте відповідь всього на 5 запитань, та отримаете:
                   </h4>
-                  <div class="price-slide__btn button button--accent" data-el="price-next">
+                  <div
+                    class="price-slide__btn button button--accent d-none d-mb-flex"
+                    data-el="price-next"
+                  >
                     Почнемо
                   </div>
                 </div>
@@ -715,13 +892,19 @@
                     </h4>
                   </div>
                 </div>
+                <div
+                  class="price-slide__btn button button--accent d-flex d-md-none offset-1"
+                  data-el="price-next"
+                >
+                  Почнемо
+                </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="price-slide">
-                <div class="offset-1 col-2 price-slide-tool">
+                <div class="offset-1 col-10 col-md-2 price-slide-tool">
                   <h4 class="section-price__title">Оберіть вид робіт</h4>
-                  <div class="slider-navigation price-slide__navigation">
+                  <div class="slider-navigation price-slide__navigation d-none d-mb-flex">
                     <div class="slider-navigation__btn slider-prev" data-el="price-prev">
                       <svg
                         class="slider-prev__icon"
@@ -766,7 +949,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-9 price-slide__row">
+                <div class="col-md-9 price-slide__row">
                   <div
                     class="price-slide__item price-service"
                     data-el="service"
@@ -1506,7 +1689,7 @@
       <div class="container">
         <div class="row align-items-start justify-content-between">
           <h2 class="offset-1 section-title">Відгуки</h2>
-          <div class="slider-navigation">
+          <div class="slider-navigation d-none d-md-flex">
             <div class="slider-navigation__btn slider-prev" data-el="reviews-prev">
               <svg
                 class="slider-prev__icon"
@@ -1895,12 +2078,12 @@
       <img class="footer-image" src="./assets/images/footer-bg.png" alt="" />
       <div class="container">
         <div class="row align-items-center justify-content-between">
-          <div class="col-3">
+          <div class="col-8 col-md-3 offset-1 offset-md-0">
             <a href="/" class="footer-logo">
               <img src="./assets/images/logo.svg" alt="Wood Expert" />
             </a>
           </div>
-          <div class="col-8 footer-menu">
+          <div class="col-8 footer-menu d-none d-md-block">
             <nav class="footer__menu menu">
               <a href="#" class="footer__menu-item menu-item">Ми пропонуємо</a>
               <a href="#" class="footer__menu-item menu-item">Сходи з нуля</a>
@@ -1909,24 +2092,24 @@
               <a href="#" class="footer__menu-item menu-item">Контакти</a>
             </nav>
           </div>
-          <div class="col-1"></div>
+          <div class="col-1 d-none d-md-block"></div>
         </div>
         <div class="row offset-1 footer-content">
-          <div class="col-2">
-            <h3 class="footer-address__title">Ми у Львові</h3>
+          <div class="col-6 col-md-2 footer-address">
+            <h3 class="footer-address__title d-none d-md-block">Ми у Львові</h3>
             <p class="footer-address__text">
               м. Львів, <br />
               вул. Водогінна, 2
             </p>
           </div>
-          <div class="col-2">
-            <h3 class="footer-address__title">Ми в Одесі</h3>
+          <div class="col-5 col-md-2 footer-address">
+            <h3 class="footer-address__title d-none d-md-block">Ми в Одесі</h3>
             <p class="footer-address__text">
               м. Одеса, <br />
               вул. Базова, 17
             </p>
           </div>
-          <div class="col-3">
+          <div class="col-11 col-md-3 footer-contacts">
             <a href="tel:+38 (096) 631-59-19" class="footer-tel">+38 (096) 631-59-19</a>
             <div class="footer-social">
               <a href="#" class="footer-social__item">
@@ -1940,14 +2123,14 @@
               </a>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-3 d-none d-md-block">
             <h4 class="footer-consultation__title">
               Залиште свій номер телефону для зворотнього звязку
             </h4>
             <input type="text" class="input-tel footer-consultation__input" data-el="input-tel" />
             <div class="footer__btn button button--regular">Подзвоніть мені</div>
           </div>
-          <div class="col-1"></div>
+          <div class="col-1 d-none d-md-block"></div>
         </div>
         <div class="row offset-1">
           <h4 class="footer-copyright">WoodExpert &copy; 2022</h4>
@@ -1980,7 +2163,7 @@
             <div class="swiper gallery-slider" data-el="gallery-slider">
               <div class="swiper-wrapper" data-el="gallery"></div>
             </div>
-            <div class="col-2 slider-navigation gallery-navigation">
+            <div class="col-12 col-md-2 slider-navigation gallery-navigation">
               <div class="slider-navigation__btn slider-prev" data-el="gallery-prev">
                 <svg
                   class="slider-prev__icon"

@@ -13,6 +13,11 @@
   color: $dark-color;
 
   outline: none;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .field-container {
