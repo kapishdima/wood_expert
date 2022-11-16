@@ -146,13 +146,15 @@ const renderActiveBox = () => {
   const values = Object.values(orderData.contact);
   const shouldRenderActive = values.every((value) => Boolean(value));
   const boxEl = document.querySelector('[data-el="box"]');
-  const submitButtonEl = document.querySelector('[data-el="price-finish"]');
+  const submitButtonEls = document.querySelectorAll('[data-el="price-finish"]');
 
   if (shouldRenderActive) {
     boxEl.classList.add('active');
-    submitButtonEl.classList.remove('slider-finish--disabled');
+    submitButtonEls.forEach((el) => {
+      el.classList.remove('slider-finish--disabled');
+    });
   } else {
     boxEl.classList.remove('active');
-    submitButtonEl.classList.add('slider-finish--disabled');
+    submitButtonEls.forEach((el) => el.classList.add('slider-finish--disabled'));
   }
 };

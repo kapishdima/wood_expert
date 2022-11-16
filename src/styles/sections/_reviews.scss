@@ -1,5 +1,8 @@
 .section-reviews {
   margin-top: 100px;
+  @media screen and (max-width: 768px) {
+    margin-top: 112px;
+  }
   &__slider {
     position: relative;
 

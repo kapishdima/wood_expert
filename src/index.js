@@ -7,9 +7,11 @@ import {
 } from './js/sliders';
 import { createPriceCalculator } from './js/price/price';
 import { createGallery } from './js/gallery';
+import { createMobileMenu } from './js/mobile-menu';
 
 import 'swiper/css';
 import './styles/index.scss';
+import { createMenuAnchors } from './js/price/menu';
 
 document.addEventListener('DOMContentLoaded', () => {
   createPromoSlider();
@@ -21,4 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   createInputTel();
 
   createGallery();
+  createMobileMenu();
+  createMenuAnchors();
 });
