@@ -41,6 +41,13 @@ export const createPortfolioSlider = () => {
     breakpoints: {
       768: {
         slidesPerGroup: 1,
+        slidesPerView: 2.8,
+        spaceBetween: 10,
+        centeredSlides: false,
+      },
+
+      1025: {
+        slidesPerGroup: 1,
         slidesPerView: 3.2,
         spaceBetween: 20,
         centeredSlides: false,
@@ -63,9 +70,13 @@ export const createReviewSlider = () => {
     breakpoints: {
       768: {
         slidesPerGroup: 1,
-        slidesPerView: 4.2,
+        slidesPerView: 3.2,
         centeredSlides: false,
-        // spaceBetween: 53,
+      },
+      1025: {
+        slidesPerGroup: 1,
+        slidesPerView: 4,
+        centeredSlides: false,
       },
     },
   });

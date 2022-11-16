@@ -56,6 +56,10 @@
     letter-spacing: 0.02em;
 
     color: $dark-color;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      font-size: 24px;
+    }
   }
 
   &-address__text {
@@ -124,6 +128,11 @@
     letter-spacing: 0.02em;
 
     color: $dark-color;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      font-size: 15px;
+      line-height: 20px;
+    }
   }
   &-consultation__input {
     width: 100%;

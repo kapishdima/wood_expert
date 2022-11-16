@@ -14,14 +14,21 @@
     display: block;
     text-decoration: none;
 
+    svg {
+      width: 100%;
+    }
+
     @media screen and (max-width: 768px) {
       svg {
-        width: 100%;
         path {
           fill: $section-dark-color;
         }
       }
     }
+  }
+
+  .header-menu__row {
+    justify-content: flex-end;
   }
 
   .header-mobile__btn {
@@ -75,6 +82,10 @@
 
   &__btn {
     width: 226px;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      width: 190px;
+    }
   }
 }
 

@@ -1,5 +1,6 @@
 .section-reviews {
   margin-top: 100px;
+
   @media screen and (max-width: 768px) {
     margin-top: 112px;
   }
@@ -7,6 +8,14 @@
     position: relative;
 
     margin-left: 200px;
+
+    @media screen and (min-width: 1200px) and (max-width: 1366px) {
+      margin-left: 134px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      margin-left: 116px;
+    }
 
     @media screen and (max-width: 768px) {
       margin-left: 0;

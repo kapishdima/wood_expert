@@ -3,6 +3,8 @@ import { createSelect } from '../select';
 
 Swiper.use([Pagination, Autoplay, EffectFade, Navigation]);
 
+let slider;
+
 const fields = ['work', 'stairs', 'wood', 'railing', 'contact'];
 const orderData = {
   work: null,
@@ -44,10 +46,12 @@ const initServices = () => {
 
 const initForm = () => {
   const formEl = document.querySelector('.price-form');
-  const submitButtonEl = document.querySelector('[data-el="price-finish"]');
+  const submitButtonEls = Array.from(document.querySelectorAll('[data-el="price-finish"]'));
   const inputEls = Array.from(formEl.querySelectorAll('[data-el="input"]'));
   const inputTelEl = formEl.querySelector('[data-el="input-tel"]');
   const selectEls = Array.from(formEl.querySelectorAll('[data-el="select"]'));
+
+  const [submitButtonDesktop, submitButtonMobile] = submitButtonEls;
 
   inputTelEl.addEventListener('input', (event) => {
     const value = event.target.value;
@@ -69,7 +73,12 @@ const initForm = () => {
     });
   });
 
-  submitButtonEl.addEventListener('click', () => {
+  submitButtonDesktop.addEventListener('click', () => {
+    console.log(orderData);
+  });
+
+  submitButtonMobile.addEventListener('click', () => {
+    slider.slideNext();
     console.log(orderData);
   });
 };
@@ -89,7 +98,7 @@ const canNext = (activeIndex) => {
 };
 
 const createPriceSlider = () => {
-  const slider = new Swiper('.section-price__slider');
+  slider = new Swiper('.section-price__slider');
 
   const nextEls = Array.from(document.querySelectorAll('[data-el="price-next"]'));
   const prevEls = Array.from(document.querySelectorAll('[data-el="price-prev"]'));
