@@ -15,6 +15,15 @@
 
   transition: all 0.25s ease;
 
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
   &--outline {
     background-color: transparent;
     border: 1px solid $dark-color;

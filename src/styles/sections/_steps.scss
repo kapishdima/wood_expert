@@ -8,6 +8,11 @@
   border-radius: 20px;
   overflow: hidden;
 
+  @media screen and (max-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+
   &__bg {
     position: absolute;
     top: 0;
@@ -23,10 +28,26 @@
   &__content {
     position: relative;
     margin-top: 43px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 36px;
+    }
   }
 
   &__image {
     position: absolute;
+
+    @media screen and (min-width: 1200px) and (max-width: 1366px) {
+      right: 2%;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      right: -4%;
+    }
+
+    @media screen and (max-width: 768px) {
+      right: 10px;
+    }
   }
 
   .steps--left {
@@ -34,12 +55,28 @@
 
   .steps--right {
     margin-top: 216px;
+
+    @media screen and (min-width: 1200px) and (max-width: 1366px) {
+      margin-top: 170px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      margin-top: 206px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+    }
   }
 
   .step-item {
     display: flex;
     margin-bottom: 30px;
     margin-left: 42px;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+    }
 
     &__number {
       display: flex;
@@ -61,6 +98,14 @@
       line-height: 59px;
 
       color: $dark-color;
+
+      @media screen and (max-width: 768px) {
+        flex: 0 0 20px;
+        height: 26px;
+
+        font-size: 12px;
+        line-height: 25px;
+      }
     }
 
     &__title {
@@ -73,6 +118,11 @@
       color: $accent-color;
 
       margin-bottom: 5px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+        line-height: 19px;
+      }
     }
 
     &__text {
@@ -83,6 +133,16 @@
       letter-spacing: 0.01em;
 
       color: $dark-color;
+
+      @media screen and (min-width: 768px) and (max-width: 1200px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
   }
 }

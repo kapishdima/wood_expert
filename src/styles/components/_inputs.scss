@@ -13,6 +13,11 @@
   color: $dark-color;
 
   outline: none;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .field-container {
@@ -23,6 +28,10 @@
   flex-direction: column;
   row-gap: 14px;
 
+  @media screen and (max-width: 768px) {
+    row-gap: 10px;
+  }
+
   &__label {
     font-style: normal;
     font-weight: 400;
@@ -31,6 +40,11 @@
     letter-spacing: 0.02em;
 
     color: $dark-color;
+
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      line-height: 21px;
+    }
   }
 
   &__input {
@@ -52,6 +66,11 @@
 
     transition: border-color 0.25s ease;
 
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
     &:focus {
       border-color: $accent-color;
     }
@@ -63,6 +82,11 @@
       letter-spacing: 0.01em;
 
       color: $btn-dark-color;
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
   }
 }
@@ -97,6 +121,11 @@
     letter-spacing: 0.01em;
 
     color: $dark-color;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   &__dropdown {
@@ -134,6 +163,11 @@
 
       cursor: pointer;
       transition: background-color 0.25s ease;
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 16px;
+      }
 
       &:hover {
         background-color: #f3f2ef;

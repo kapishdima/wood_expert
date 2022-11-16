@@ -5,6 +5,8 @@ Swiper.use([Pagination, Autoplay, EffectFade, Navigation]);
 
 const createGallerySlider = () => {
   new Swiper('[data-el="gallery-slider"]', {
+    slidesPerView: 1,
+    spaceBetween: 10,
     navigation: {
       nextEl: '[data-el="gallery-next"]',
       prevEl: '[data-el="gallery-prev"]',

@@ -5,6 +5,7 @@ Swiper.use([Pagination, Autoplay, EffectFade, Navigation]);
 export const createPromoSlider = () => {
   new Swiper('.section-promo__slider', {
     speed: 1000,
+    spaceBetween: 10,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
@@ -16,30 +17,67 @@ export const createPromoSlider = () => {
   });
 };
 
+export const createServicesSlider = () => {
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    new Swiper('.section-services__slider', {
+      spaceBetween: 8,
+      slidesPerView: 1.25,
+      centeredSlides: true,
+    });
+  }
+};
+
 export const createPortfolioSlider = () => {
   new Swiper('.section-portfolio__slider', {
-    width: 1287,
-    loop: true,
     slidesPerGroup: 1,
-    slidesPerView: 3,
-    spaceBetween: 20,
+    slidesPerView: 1.25,
+    spaceBetween: 8,
+    centeredSlides: true,
     navigation: {
       prevEl: '[data-el="portfolio-prev"]',
       nextEl: '[data-el="portfolio-next"]',
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerGroup: 1,
+        slidesPerView: 2.8,
+        spaceBetween: 10,
+        centeredSlides: false,
+      },
+
+      1025: {
+        slidesPerGroup: 1,
+        slidesPerView: 3.2,
+        spaceBetween: 20,
+        centeredSlides: false,
+      },
     },
   });
 };
 
 export const createReviewSlider = () => {
   new Swiper('.section-reviews__slider', {
-    width: 1340,
-    loop: true,
     slidesPerGroup: 1,
-    slidesPerView: 4,
-    spaceBetween: 53,
+    slidesPerView: 1.35,
+    spaceBetween: 10,
+    centeredSlides: true,
     navigation: {
       prevEl: '[data-el="reviews-prev"]',
       nextEl: '[data-el="reviews-next"]',
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerGroup: 1,
+        slidesPerView: 3.2,
+        centeredSlides: false,
+      },
+      1025: {
+        slidesPerGroup: 1,
+        slidesPerView: 4,
+        centeredSlides: false,
+      },
     },
   });
 };

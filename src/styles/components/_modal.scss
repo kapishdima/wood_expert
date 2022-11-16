@@ -22,6 +22,11 @@
 
     background: rgba(72, 71, 64, 0.75);
     backdrop-filter: blur(20px);
+
+    @media screen and (max-width: 768px) {
+      background-color: $white-color;
+      backdrop-filter: initial;
+    }
   }
 
   &-content {
@@ -32,6 +37,10 @@
     z-index: 2;
 
     padding: 95px 0 71px 0;
+
+    @media screen and (max-width: 768px) {
+      padding: 60px 0 25px 0;
+    }
   }
 
   &-close {
@@ -41,11 +50,28 @@
     z-index: 3;
 
     cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      top: 20px;
+      right: 18px;
+
+      svg {
+        path {
+          stroke: $dark-color;
+        }
+      }
+    }
   }
 
   .gallery-slider {
     width: 33%;
     height: 100%;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      height: 90%;
+      padding: 0 18px;
+    }
   }
 
   .gallery-slide {
@@ -68,12 +94,24 @@
     bottom: 71px;
     right: 84px;
 
+    @media screen and (max-width: 768px) {
+      bottom: 20px;
+      right: -34%;
+    }
+
     .slider-navigation__btn {
       border-color: $section-dark-color;
+      @media screen and (max-width: 768px) {
+        border-color: $dark-color;
+      }
 
       svg {
         path {
           stroke: $section-dark-color;
+
+          @media screen and (max-width: 768px) {
+            stroke: $dark-color;
+          }
         }
       }
     }
