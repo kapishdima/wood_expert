@@ -1,5 +1,7 @@
 import Swiper, { Pagination, Navigation, Autoplay, EffectFade } from 'swiper';
+import { createButtonWithLoader } from '../button/button';
 import { createSelect } from '../select';
+import { sendOrder } from './telegram';
 
 Swiper.use([Pagination, Autoplay, EffectFade, Navigation]);
 
@@ -73,13 +75,11 @@ const initForm = () => {
     });
   });
 
-  submitButtonDesktop.addEventListener('click', () => {
-    console.log(orderData);
-  });
+  createButtonWithLoader(submitButtonDesktop, () => sendOrder(orderData));
 
   submitButtonMobile.addEventListener('click', () => {
     slider.slideNext();
-    console.log(orderData);
+    sendOrder(orderData);
   });
 };
 

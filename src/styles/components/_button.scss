@@ -5,6 +5,7 @@
 
   padding: 11px 0;
   border-radius: 20px;
+  border: none;
 
   font-style: normal;
   font-weight: 400;
@@ -48,6 +49,10 @@
       background-color: $accent-color;
     }
   }
+
+  &--with-loader {
+    position: relative;
+  }
 }
 
 .button-circle {
@@ -70,5 +75,14 @@
     line-height: 19px;
 
     color: $white-color;
+  }
+}
+
+.button-content {
+  opacity: 1;
+  transition: opacity 0.25s ease;
+
+  &--hidden {
+    opacity: 0;
   }
 }

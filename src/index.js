@@ -8,10 +8,12 @@ import {
 import { createPriceCalculator } from './js/price/price';
 import { createGallery } from './js/gallery';
 import { createMobileMenu } from './js/mobile-menu';
+import { createMenuAnchors } from './js/menu';
+import { createConsultationForm } from './js/consultation/consultation';
+import { createButtonWithAnchors } from './js/button/button';
 
 import 'swiper/css';
 import './styles/index.scss';
-import { createMenuAnchors } from './js/price/menu';
 
 document.addEventListener('DOMContentLoaded', () => {
   createPromoSlider();
@@ -21,8 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   createPriceCalculator();
   createInputTel();
+  createConsultationForm();
 
   createGallery();
   createMobileMenu();
   createMenuAnchors();
+  createButtonWithAnchors();
 });
