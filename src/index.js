@@ -11,6 +11,7 @@ import { createMobileMenu } from './js/mobile-menu';
 import { createMenuAnchors } from './js/menu';
 import { createConsultationForm } from './js/consultation/consultation';
 import { createButtonWithAnchors } from './js/button/button';
+import { createSelects } from './js/select';
 
 import 'swiper/css';
 import './styles/index.scss';
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   createPriceCalculator();
   createInputTel();
+  createSelects();
   createConsultationForm();
 
   createGallery();

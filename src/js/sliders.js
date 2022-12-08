@@ -5,7 +5,6 @@ Swiper.use([Pagination, Autoplay, EffectFade, Navigation]);
 export const createPromoSlider = () => {
   new Swiper('.section-promo__slider', {
     speed: 1000,
-    // spaceBetween: 10,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,

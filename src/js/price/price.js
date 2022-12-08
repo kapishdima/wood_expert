@@ -1,169 +1,60 @@
-import Swiper, { Pagination, Navigation, Autoplay, EffectFade } from 'swiper';
 import { createButtonWithLoader } from '../button/button';
-import { createSelect } from '../select';
+import { createForm } from './form';
 import { sendOrder } from './telegram';
+import { createPriceSlider } from './slider';
+import { createServices } from './services';
+import { animateBoxClose, animateBoxOpen } from './animated-box';
 
-Swiper.use([Pagination, Autoplay, EffectFade, Navigation]);
-
-let slider;
-
-const fields = ['work', 'stairs', 'wood', 'railing', 'contact'];
-const orderData = {
-  work: null,
-  stairs: null,
-  wood: null,
-  railing: null,
-  contact: new Proxy(
-    { name: null, messanger: 'Viber', location: 'Львівська (область)', phone: null },
-    {
-      set: (obj, prop, value) => {
-        Reflect.set(obj, prop, value);
-        renderActiveBox();
-        return true;
-      },
-    },
-  ),
-};
+let form;
+let pagination;
 
 export const createPriceCalculator = () => {
-  createPriceSlider();
-  initServices();
+  pagination = createPriceSlider();
   initForm();
+  initServices();
 };
 
 const initServices = () => {
-  const servicesEls = Array.from(document.querySelectorAll('[data-el="service"]'));
-  servicesEls.forEach((serviceEl) => {
-    serviceEl.addEventListener('click', () => {
-      const field = serviceEl.dataset.field;
-      const value = serviceEl.dataset.value;
+  const onServiceClick = (serviceName, serviceValue) => {
+    pagination.next();
+    form.setValue(serviceName, serviceValue);
+  };
 
-      orderData[field] = value;
-
-      clearActiveServices(servicesEls);
-      renderActiveService(serviceEl);
-    });
-  });
+  createServices(onServiceClick);
 };
 
 const initForm = () => {
   const formEl = document.querySelector('.price-form');
-  const submitButtonEls = Array.from(document.querySelectorAll('[data-el="price-finish"]'));
-  const inputEls = Array.from(formEl.querySelectorAll('[data-el="input"]'));
-  const inputTelEl = formEl.querySelector('[data-el="input-tel"]');
-  const selectEls = Array.from(formEl.querySelectorAll('[data-el="select"]'));
+  const [submitButtonDesktop, submitButtonMobile] = Array.from(
+    document.querySelectorAll('[data-el="price-finish"]'),
+  );
 
-  const [submitButtonDesktop, submitButtonMobile] = submitButtonEls;
+  const onValid = () => {
+    submitButtonDesktop.classList.remove('slider-finish--disabled');
+    submitButtonMobile.classList.remove('slider-finish--disabled');
+    animateBoxOpen();
+  };
 
-  inputTelEl.addEventListener('input', (event) => {
-    const value = event.target.value;
+  const onInvalid = () => {
+    submitButtonDesktop.classList.add('slider-finish--disabled');
+    submitButtonMobile.classList.add('slider-finish--disabled');
+    animateBoxClose();
+  };
 
-    orderData.contact.phone = value;
-  });
+  form = createForm(formEl, { onValid, onInvalid });
 
-  inputEls.forEach((inputEl) => {
-    inputEl.addEventListener('input', (event) => {
-      const value = event.target.value;
+  const onSubmitFormDesktop = () => {
+    const fields = form.getValue();
+    sendOrder(fields);
+  };
 
-      orderData.contact.name = value;
-    });
-  });
+  const onSubmitFormMobile = () => {
+    const fields = form.getValue();
 
-  selectEls.forEach((selectEl) => {
-    createSelect(selectEl, (field, value) => {
-      orderData.contact[field] = value;
-    });
-  });
-
-  createButtonWithLoader(submitButtonDesktop, () => sendOrder(orderData));
-
-  submitButtonMobile.addEventListener('click', () => {
+    sendOrder(fields);
     slider.slideNext();
-    sendOrder(orderData);
-  });
-};
+  };
 
-const renderActiveService = (serviceEl) => {
-  serviceEl.classList.add('selected');
-};
-
-const canNext = (activeIndex) => {
-  const index = activeIndex - 1;
-
-  if (index < 0) {
-    return true;
-  }
-  const dataField = fields[index];
-  return Boolean(orderData[dataField]);
-};
-
-const createPriceSlider = () => {
-  slider = new Swiper('.section-price__slider');
-
-  const nextEls = Array.from(document.querySelectorAll('[data-el="price-next"]'));
-  const prevEls = Array.from(document.querySelectorAll('[data-el="price-prev"]'));
-  const stepCounter = document.querySelector('[data-el="step-counter"]');
-  const stepPaginationEls = Array.from(document.querySelectorAll('[data-el="step-pagination"]'));
-
-  nextEls.forEach((nextEl) => {
-    nextEl.addEventListener('click', () => {
-      if (!canNext(slider.activeIndex)) {
-        return;
-      }
-
-      slider.slideNext();
-      stepCounter.innerText = slider.activeIndex;
-      renderActivePagination(slider.activeIndex, stepPaginationEls);
-    });
-  });
-
-  prevEls.forEach((prevEl) => {
-    prevEl.addEventListener('click', () => {
-      slider.slidePrev();
-      stepCounter.innerText = slider.activeIndex;
-      renderActivePagination(slider.activeIndex, stepPaginationEls);
-    });
-  });
-};
-
-const renderActivePagination = (activeStep, paginationEls) => {
-  const index = activeStep - 1;
-
-  if (index < 0) {
-    return clearActivePagination(paginationEls);
-  }
-
-  clearActivePagination(paginationEls);
-
-  const paginationEl = paginationEls[index];
-  paginationEl.classList.add('active');
-};
-
-const clearActiveServices = (servicesEls) => {
-  servicesEls.forEach((serviceEl) => {
-    serviceEl.classList.remove('selected');
-  });
-};
-
-const clearActivePagination = (paginationEls) => {
-  paginationEls.forEach((paginationEl) => {
-    paginationEl.classList.remove('active');
-  });
-};
-
-const renderActiveBox = () => {
-  const values = Object.values(orderData.contact);
-  const shouldRenderActive = values.every((value) => Boolean(value));
-  const boxEl = document.querySelector('[data-el="box"]');
-  const submitButtonEls = document.querySelectorAll('[data-el="price-finish"]');
-
-  if (shouldRenderActive) {
-    boxEl.classList.add('active');
-    submitButtonEls.forEach((el) => {
-      el.classList.remove('slider-finish--disabled');
-    });
-  } else {
-    boxEl.classList.remove('active');
-    submitButtonEls.forEach((el) => el.classList.add('slider-finish--disabled'));
-  }
+  createButtonWithLoader(submitButtonDesktop, onSubmitFormDesktop);
+  createButtonWithLoader(submitButtonMobile, onSubmitFormMobile);
 };

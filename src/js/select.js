@@ -4,6 +4,7 @@ export const createSelect = (target, onSelect) => {
   }
 
   const valueEl = target.querySelector('[data-el="select-value"]');
+  const valueInputEl = target.querySelector('#select-value');
   const optionEls = Array.from(target.querySelectorAll('[data-el="option"]'));
   const inputEl = target.querySelector('[data-el="select-input"]');
 
@@ -21,7 +22,10 @@ export const createSelect = (target, onSelect) => {
       return;
     }
 
+    valueInputEl.value = value;
     valueEl.innerText = value;
+
+    valueInputEl.dispatchEvent(new Event('input', { bubbles: true }));
   };
 
   inputEl.addEventListener('click', (event) => {
@@ -35,18 +39,15 @@ export const createSelect = (target, onSelect) => {
   optionEls.forEach((optionEl) => {
     optionEl.addEventListener('click', (event) => {
       const value = event.target.innerText;
-      const field = target.dataset.field;
 
       setValue(value);
       close();
-      onSelect(field, value);
     });
   });
 };
 
 export const createSelects = () => {
   const selectEls = Array.from(document.querySelectorAll('[data-el="select"]'));
-
   selectEls.forEach((selectEl) => {
     createSelect(selectEl);
   });
