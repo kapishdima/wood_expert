@@ -4258,6 +4258,15 @@
   border-color: #afaf9f;
 }
 
+.swiper.section-reviews__slider {
+  padding-bottom: 200px;
+}
+@media screen and (max-width: 768px) {
+  .swiper.section-reviews__slider {
+    padding-bottom: 112px;
+  }
+}
+
 .input-tel {
   padding-bottom: 4px;
   padding-left: 10px;
@@ -5434,6 +5443,9 @@
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
 }
+.section-reviews .review-item {
+  position: relative;
+}
 .section-reviews .review-item__rating {
   display: -ms-flexbox;
   display: flex;
@@ -5458,6 +5470,37 @@
   line-height: 22px;
   letter-spacing: 0.01em;
   color: #484740;
+}
+.section-reviews .review-item__text-popover {
+  position: absolute;
+  top: 50px;
+  z-index: -1;
+  padding: 16px 24px;
+  background: #f3f2ef;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  color: #484740;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.section-reviews .review-item__text-popover.visible {
+  opacity: 1;
+  z-index: 1;
+}
+.section-reviews .review-item__more {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  text-decoration-line: underline;
+  color: #484740;
+  opacity: 0;
+}
+.section-reviews .review-item__more.visible {
+  opacity: 1;
 }
 
 .section-steps {
