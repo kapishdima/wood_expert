@@ -17,27 +17,11 @@
 
     cursor: pointer;
   }
-  .slider-prev {
-  }
-
   .slider-next {
     .slider-prev__icon {
       transform: rotate(180deg);
     }
   }
-
-  // .slider-prev.disabled,
-  // .slider-next.disabled {
-  //   pointer-events: none;
-  //   background-color: $btn-dark-color;
-  //   border-color: $btn-dark-color;
-
-  //   svg {
-  //     path {
-  //       stroke: $white-color;
-  //     }
-  //   }
-  // }
 
   .slider-finish {
     background-color: $accent-color;
@@ -47,5 +31,13 @@
       background-color: $btn-dark-color;
       border-color: $btn-dark-color;
     }
+  }
+}
+
+.swiper.section-reviews__slider {
+  padding-bottom: 200px;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 112px;
   }
 }
