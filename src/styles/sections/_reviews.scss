@@ -38,6 +38,7 @@
   }
 
   .review-item {
+    position: relative;
     &__rating {
       display: flex;
       align-items: center;
@@ -63,6 +64,49 @@
       letter-spacing: 0.01em;
 
       color: $dark-color;
+
+      &-popover {
+        position: absolute;
+        top: 50px;
+        z-index: -1;
+
+        padding: 16px 24px;
+        background: $section-dark-color;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+
+        color: $dark-color;
+
+        opacity: 0;
+
+        transition: opacity 0.25s ease;
+
+        &.visible {
+          opacity: 1;
+          z-index: 1;
+        }
+      }
+    }
+
+    &__more {
+      margin-top: 10px;
+
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0.01em;
+      text-decoration-line: underline;
+
+      color: $dark-color;
+
+      opacity: 0;
+
+      &.visible {
+        opacity: 1;
+      }
     }
   }
 }

@@ -12,6 +12,7 @@ import { createMenuAnchors } from './js/menu';
 import { createConsultationForm } from './js/consultation/consultation';
 import { createButtonWithAnchors } from './js/button/button';
 import { createSelects } from './js/select';
+import { createReviews } from './js/reviews';
 
 import 'swiper/css';
 import './styles/index.scss';
@@ -31,4 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
   createMobileMenu();
   createMenuAnchors();
   createButtonWithAnchors();
+  createReviews();
 });
