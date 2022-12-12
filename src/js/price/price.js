@@ -1,9 +1,10 @@
 import { createButtonWithLoader } from '../button/button';
 import { createForm } from './form';
-import { sendOrder } from './telegram';
+import { sendOrderNotification } from './notifications/telegram';
 import { createPriceSlider } from './slider';
 import { createServices } from './services';
 import { animateBoxClose, animateBoxOpen } from './animated-box';
+import { sendSMSNotification } from './notifications/sms';
 
 let form;
 let pagination;
@@ -45,13 +46,16 @@ const initForm = () => {
 
   const onSubmitFormDesktop = () => {
     const fields = form.getValue();
-    sendOrder(fields);
+
+    sendOrderNotification(fields);
+    sendSMSNotification(fields);
   };
 
   const onSubmitFormMobile = () => {
     const fields = form.getValue();
 
-    sendOrder(fields);
+    sendOrderNotification(fields);
+    sendSMSNotification(fields);
     slider.slideNext();
   };
 
