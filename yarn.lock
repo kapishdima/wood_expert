@@ -5434,6 +5434,14 @@ resolve@^1.10.0, resolve@^1.9.0:
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
 
+resource-hints-webpack-plugin@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/resource-hints-webpack-plugin/-/resource-hints-webpack-plugin-0.0.2.tgz#233cea158af85ef360a934a03284c46d908b7f73"
+  integrity sha512-/7W7ingbP/TGbny8B4I5pRa1/kyhmfVgi9oMT6Yl4vsIlHzyWJEuAIFSM3Xs1v7axV5eqMNWbOI6N6JmBwQEoA==
+  dependencies:
+    minimatch "^3.0.4"
+    object-assign "^4.1.1"
+
 responselike@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/responselike/-/responselike-1.0.2.tgz#918720ef3b631c5642be068f15ade5a46f4ba1e7"

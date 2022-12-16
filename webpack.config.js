@@ -4,6 +4,7 @@ const dotenv = require('dotenv').config();
 
 /* PLUGINS */
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -52,7 +53,10 @@ const setupPlugins = () => {
         collapseWhitespace: isProduction,
       },
       scriptLoading: 'defer',
+      prefetch: ['*.css'],
+      preload: ['*.css'],
     }),
+    new ResourceHintWebpackPlugin(),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
