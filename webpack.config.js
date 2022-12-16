@@ -9,6 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCSSExtractWebpackPugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const isDevelopment = process.env.NODE_MODE === 'development';
 const isProduction = !isDevelopment;
@@ -50,6 +51,7 @@ const setupPlugins = () => {
       minify: {
         collapseWhitespace: isProduction,
       },
+      scriptLoading: 'defer',
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
@@ -94,7 +96,7 @@ module.exports = {
     },
     minimize: true,
     minimizer: [
-      '...',
+      new TerserPlugin(),
       new ImageMinimizerPlugin({
         minimizer: {
           implementation: ImageMinimizerPlugin.imageminMinify,
