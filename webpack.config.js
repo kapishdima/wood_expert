@@ -1,6 +1,10 @@
 const path = require('path');
+const webpack = require('webpack');
+const dotenv = require('dotenv').config();
 
 /* PLUGINS */
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCSSExtractWebpackPugin = require('mini-css-extract-plugin');
@@ -17,17 +21,6 @@ const setupDevServer = () => {
       open: true,
     };
   }
-};
-
-/* Setup Optimization Webpack with Css, JS Minimizer on production */
-const setupOptimization = () => {
-  const defaultConfig = {
-    splitChunks: {
-      chunks: 'all',
-    },
-  };
-
-  return defaultConfig;
 };
 
 /* List of css loaders  */
@@ -50,7 +43,6 @@ const cssLoaders = (extra) => {
   return loaders;
 };
 
-/* Setup Plugins with CriticalCssWebpackPlugin on production */
 const setupPlugins = () => {
   let defaultPlugins = [
     new HtmlWebpackPlugin({
@@ -63,13 +55,24 @@ const setupPlugins = () => {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/assets'),
-          to: path.resolve(__dirname, 'docs/assets'),
+          from: path.resolve(__dirname, 'src/assets/favicon'),
+          to: path.resolve(__dirname, 'docs/assets/favicon'),
+        },
+        {
+          from: path.resolve(__dirname, 'src/assets/images'),
+          to: path.resolve(__dirname, 'docs/assets/images'),
+        },
+        {
+          from: path.resolve(__dirname, 'src/assets/fonts'),
+          to: path.resolve(__dirname, 'docs/assets/fonts'),
         },
       ],
     }),
     new MiniCSSExtractWebpackPugin({
       filename: '[name].css',
+    }),
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(process.env),
     }),
   ];
 
@@ -83,8 +86,39 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: isDevelopment ? 'index.[contenthash].js' : '[name].js',
+    assetModuleFilename: 'assets/images/[hash][ext][query]',
   },
-  optimization: setupOptimization(),
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+    minimize: true,
+    minimizer: [
+      '...',
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.imageminMinify,
+          options: {
+            plugins: [
+              'imagemin-gifsicle',
+              ['imagemin-mozjpeg', { quality: 30 }],
+              'imagemin-pngquant',
+              'imagemin-svgo',
+            ],
+          },
+        },
+        generator: [
+          {
+            preset: 'webp',
+            implementation: ImageMinimizerPlugin.imageminGenerate,
+            options: {
+              plugins: ['imagemin-webp'],
+            },
+          },
+        ],
+      }),
+    ],
+  },
   devServer: setupDevServer(),
   module: {
     rules: [
@@ -106,11 +140,18 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|svg|gif)$/,
-        use: ['file-loader'],
+        use: {
+          loader: 'file-loader',
+          options: {
+            outputPath: 'assets/images',
+            filename: '[hash][ext][query]',
+          },
+        },
       },
+
       {
         test: /\.(ttf|eot|woff|woff2)$/,
-        use: ['file-loader'],
+        type: 'asset',
       },
     ],
   },

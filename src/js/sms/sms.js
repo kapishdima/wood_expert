@@ -1,6 +1,10 @@
-const SMS_API_URL = 'https://api.turbosms.ua';
-const SMS_API_KEY = '57ba4123b347f3598d6e8da3252f6b65ef886c8e';
+import { normalizePhoneValue } from '../input-tel';
+
+const SMS_API_URL = process.env.SMS_API_URL;
+const SMS_API_KEY = process.env.SMS_API_KEY;
 const SEND_MESSAGE_URL = `${SMS_API_URL}/message/send.json`;
+
+const isDevelopment = process.env.NODE_MODE === 'development';
 
 const withToken = (url) => {
   return `${url}?token=${SMS_API_KEY}`;
@@ -16,8 +20,13 @@ export const sendSMS = async (phone, message) => {
       sender: 'WoodExpert',
       text: message,
     },
-    recipients: ['380988666297'],
+    recipients: [normalizePhoneValue(phone)],
   };
+
+  if (isDevelopment) {
+    console.log(sendData);
+    return;
+  }
 
   const response = await fetch(withToken(SEND_MESSAGE_URL), {
     method: 'POST',

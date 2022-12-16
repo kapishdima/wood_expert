@@ -19,3 +19,7 @@ export const createInputTel = (onChange) => {
     }
   });
 };
+
+export const normalizePhoneValue = (phone) => {
+  return phone.replaceAll(/\_|\(|\)|\-|/g, '').replace('+', '');
+};

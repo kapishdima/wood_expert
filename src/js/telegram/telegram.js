@@ -1,5 +1,5 @@
-const TELEGRAM_API_KEY = '5487817810:AAEC6H1x16_T8xXK-izVibphKEwUVwfOlXA';
-const TELEGRAM_API_URL = 'https://api.telegram.org/bot';
+const TELEGRAM_API_KEY = process.env.TELEGRAM_API_KEY;
+const TELEGRAM_API_URL = process.env.TELEGRAM_API_URL;
 
 export const sendMessage = async (message, reply) => {
   const chatId = 593128405;

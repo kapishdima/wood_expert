@@ -1,4 +1,4 @@
-import { createInputTel } from './js/inputs';
+import { createInputTel } from './js/input-tel';
 import {
   createPromoSlider,
   createPortfolioSlider,

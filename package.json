@@ -9,6 +9,7 @@
     "start": "cross-env NODE_MODE=development DEV_SERVER_PORT=3000 webpack serve --hot --mode development"
   },
   "devDependencies": {
+    "@squoosh/lib": "^0.4.0",
     "autoprefixer": "^10.4.13",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
@@ -16,6 +17,13 @@
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "image-minimizer-webpack-plugin": "^3.8.1",
+    "image-webpack-loader": "^8.1.0",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webpack-plugin": "^2.4.2",
     "immutable-css": "^1.1.2",
     "mini-css-extract-plugin": "^2.6.1",
     "postcss": "^8.4.18",
@@ -30,6 +38,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "gsap": "^3.11.3",
     "imask": "^6.4.3",
     "lodash.get": "^4.4.2",

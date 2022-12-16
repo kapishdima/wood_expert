@@ -133,14 +133,14 @@
               >
             </nav>
             <div class="header-top__social">
-              <a href="#" class="header-top__social-item">
-                <img src="./assets/images/viber-icon.svg" alt="" />
+              <a href="viber://chat/?number=%2B380933077550" class="header-top__social-item">
+                <img src="<%= require('./assets/images/viber-icon.svg').default%>" alt="" />
               </a>
-              <a href="#" class="header-top__social-item">
-                <img src="./assets/images/telegram-icon.svg" alt="" />
+              <a href="tg://resolve?domain=WoodExpertUA" class="header-top__social-item">
+                <img src="<%= require('./assets/images/telegram-icon.svg').default%>" alt="" />
               </a>
-              <a href="#" class="header-top__social-item">
-                <img src="./assets/images/tel-icon.svg" alt="" />
+              <a href="tel:380933077550" class="header-top__social-item">
+                <img src="<%= require('./assets/images/tel-icon.svg').default%>" alt="" />
               </a>
             </div>
             <div
@@ -185,7 +185,7 @@
                   <img
                     loading="lazy"
                     class="promo-slide__image"
-                    src="./assets/images/header-slider/slider-1.jpg"
+                    src="<%=require('./assets/images/header-slider/slider-1.jpg?as=webp').default %>"
                     alt=""
                   />
                 </div>
@@ -196,7 +196,7 @@
                   <img
                     loading="lazy"
                     class="promo-slide__image"
-                    src="./assets/images/header-slider/slider-2.jpg"
+                    src="<%=require('./assets/images/header-slider/slider-2.jpg?as=webp').default %>"
                     alt=""
                   />
                 </div>
@@ -207,7 +207,7 @@
                   <img
                     loading="lazy"
                     class="promo-slide__image"
-                    src="./assets/images/header-slider/slider-3.jpg"
+                    src="<%=require('./assets/images/header-slider/slider-3.jpg?as=webp').default%>"
                     alt=""
                   />
                 </div>
@@ -218,7 +218,7 @@
                   <img
                     loading="lazy"
                     class="promo-slide__image"
-                    src="./assets/images/header-slider/slider-4.jpg"
+                    src="<%=require('./assets/images/header-slider/slider-4.jpg?as=webp').default%>"
                     alt=""
                   />
                 </div>
@@ -229,7 +229,7 @@
                   <img
                     loading="lazy"
                     class="promo-slide__image"
-                    src="./assets/images/header-slider/slider-5.jpg"
+                    src="<%= require('./assets/images/header-slider/slider-5.jpg?as=webp').default%>"
                     alt=""
                   />
                 </div>
@@ -384,14 +384,17 @@
                     >+38 (096) 631-59-19</a
                   >
                   <div class="header-mobile__social">
-                    <a href="#" class="header-top__social-item">
-                      <img src="./assets/images/viber-icon.svg" alt="" />
+                    <a href="viber://chat/?number=%2B380933077550" class="header-top__social-item">
+                      <img src="<%= require('./assets/images/viber-icon.svg').default%>" alt="" />
                     </a>
-                    <a href="#" class="header-top__social-item">
-                      <img src="./assets/images/telegram-icon.svg" alt="" />
+                    <a href="tg://resolve?domain=WoodExpertUA" class="header-top__social-item">
+                      <img
+                        src="<%= require('./assets/images/telegram-icon.svg').default%>"
+                        alt=""
+                      />
                     </a>
-                    <a href="#" class="header-top__social-item">
-                      <img src="./assets/images/tel-icon.svg" alt="" />
+                    <a href="tel:380933077550" class="header-top__social-item">
+                      <img src="<%= require('./assets/images/tel-icon.svg').default%>" alt="" />
                     </a>
                   </div>
                 </div>
@@ -415,7 +418,7 @@
           <div class="col-4 service-item">
             <img
               loading="lazy"
-              src="./assets/images/services/service-1.jpg"
+              src="<%= require('./assets/images/services/service-1.jpg?as=webp').default%>"
               alt=""
               class="service-item__image"
             />
@@ -429,7 +432,7 @@
           <div class="col-4 service-item">
             <img
               loading="lazy"
-              src="./assets/images/services/service-2.jpg"
+              src="<%= require('./assets/images/services/service-2.jpg?as=webp').default%>"
               alt=""
               class="service-item__image"
             />
@@ -443,7 +446,7 @@
           <div class="col-4 service-item">
             <img
               loading="lazy"
-              src="./assets/images/services/service-3.jpg"
+              src="<%= require('./assets/images/services/service-3.jpg?as=webp').default%>"
               alt=""
               class="service-item__image"
             />
@@ -471,7 +474,7 @@
             <div class="service-item">
               <img
                 loading="lazy"
-                src="./assets/images/services/service-1.jpg"
+                src="<%= require('./assets/images/services/service-1.jpg?as=webp').default%>"
                 alt=""
                 class="service-item__image"
               />
@@ -488,7 +491,7 @@
             <div class="service-item">
               <img
                 loading="lazy"
-                src="./assets/images/services/service-2.jpg"
+                src="<%= require('./assets/images/services/service-2.jpg?as=webp').default%>"
                 alt=""
                 class="service-item__image"
               />
@@ -505,7 +508,7 @@
             <div class="service-item">
               <img
                 loading="lazy"
-                src="./assets/images/services/service-3.jpg"
+                src="<%= require('./assets/images/services/service-3.jpg?as=webp').default%>"
                 alt=""
                 class="service-item__image"
               />
@@ -525,7 +528,7 @@
       <section class="section section-about">
         <img
           loading="lazy"
-          src="./assets/images/about/about-bg.png"
+          src="<%= require('./assets/images/about/about-bg.png?as=webp').default%>"
           alt=""
           class="section-about__bg"
         />
@@ -535,7 +538,11 @@
         <div class="row about-list">
           <div class="offset-1 col-10 col-md-4 about-item">
             <div class="about-item__image">
-              <img loading="lazy" src="./assets/images/about/about-1.svg" alt="" />
+              <img
+                loading="lazy"
+                src="<%= require('./assets/images/about/about-1.svg').default%>"
+                alt=""
+              />
             </div>
             <h3 class="about-item__title">
               Виготовляємо сходи з твердих порід дерева: ясень, бук та дуб
@@ -543,7 +550,11 @@
           </div>
           <div class="offset-1 col-10 col-md-4 about-item">
             <div class="about-item__image">
-              <img loading="lazy" src="./assets/images/about/about-3.svg" alt="" />
+              <img
+                loading="lazy"
+                src="<%= require('./assets/images/about/about-3.svg').default%>"
+                alt=""
+              />
             </div>
             <h3 class="about-item__title">
               Використовуємо камерну сушку, сходи мають вологість 8-12%
@@ -551,13 +562,21 @@
           </div>
           <div class="offset-1 col-10 col-md-4 about-item">
             <div class="about-item__image">
-              <img loading="lazy" src="./assets/images/about/about-2.svg" alt="" />
+              <img
+                loading="lazy"
+                src="<%= require('./assets/images/about/about-2.svg').default%>"
+                alt=""
+              />
             </div>
             <h3 class="about-item__title">Сходи виключно з екологічної сировини з Карпат</h3>
           </div>
           <div class="offset-1 col-10 col-md-4 about-item">
             <div class="about-item__image">
-              <img loading="lazy" src="./assets/images/about/about-4.svg" alt="" />
+              <img
+                loading="lazy"
+                src="<%= require('./assets/images/about/about-4.svg').default%>"
+                alt=""
+              />
             </div>
             <h3 class="about-item__title">Доставляємо матеріали та монтуємо сходи вчасно</h3>
           </div>
@@ -611,248 +630,252 @@
       <div class="swiper section-portfolio__slider">
         <div class="swiper-wrapper">
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/1/1.jpg" alt="" />
+            <img
+              loading="lazy"
+              src="<%= require('./assets/images/portfolio/1/1.jpg?as=webp').default%>"
+              alt=""
+            />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/1/2.jpg", "./assets/images/portfolio/1/3.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/1/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/1/3.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/2/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/2/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/2/2.jpg", "./assets/images/portfolio/2/3.jpg", "./assets/images/portfolio/2/4.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/2/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/2/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/2/4.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/3/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/3/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/3/2.jpg", "./assets/images/portfolio/3/3.jpg", "./assets/images/portfolio/3/4.jpg", "./assets/images/portfolio/3/5.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/3/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/3/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/3/4.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/3/5.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/4/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/4/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/4/2.jpg", "./assets/images/portfolio/4/3.jpg", "./assets/images/portfolio/4/4.jpg", "./assets/images/portfolio/4/5.jpg", "./assets/images/portfolio/4/6.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/4/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/4/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/4/4.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/4/5.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/4/6.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/5/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/5/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/5/2.jpg", "./assets/images/portfolio/5/3.jpg", "./assets/images/portfolio/5/4.jpg", "./assets/images/portfolio/5/5.jpg", "./assets/images/portfolio/5/6.jpg", "./assets/images/portfolio/5/7.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/5/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/5/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/5/4.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/5/5.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/5/6.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/5/7.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/6/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/6/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/6/2.jpg", "./assets/images/portfolio/6/3.jpg", "./assets/images/portfolio/6/4.jpg", "./assets/images/portfolio/6/5.jpg", "./assets/images/portfolio/6/6.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/6/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/6/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/6/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/6/4.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/6/5.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/7/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/7/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/7/2.jpg", "./assets/images/portfolio/7/3.jpg", "./assets/images/portfolio/7/4.jpg", "./assets/images/portfolio/7/5.jpg", "./assets/images/portfolio/7/6.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/7/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/7/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/7/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/7/4.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/7/5.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/8/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/8/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/8/2.jpg", "./assets/images/portfolio/8/3.jpg", "./assets/images/portfolio/8/4.jpg", "./assets/images/portfolio/8/5.jpg", "./assets/images/portfolio/8/6.jpg", "./assets/images/portfolio/8/7.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/8/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/8/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/8/4.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/8/5.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/8/6.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/8/7.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/9/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/9/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/9/2.jpg", "./assets/images/portfolio/9/3.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/9/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/9/3.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/10/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/10/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/10/2.jpg", "./assets/images/portfolio/10/3.jpg", "./assets/images/portfolio/10/4.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/10/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/10/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/10/4.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/11/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/11/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/11/2.jpg", "./assets/images/portfolio/11/3.jpg", "./assets/images/portfolio/11/4.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/11/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/11/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/11/4.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/12/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/12/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/12/2.jpg", "./assets/images/portfolio/12/3.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/12/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/12/3.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/13/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/13/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/13/2.jpg", "./assets/images/portfolio/13/3.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/13/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/13/3.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/14/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/14/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/14/2.jpg", "./assets/images/portfolio/14/3.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/14/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/14/3.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/15/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/15/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/15/2.jpg", "./assets/images/portfolio/15/3.jpg", "./assets/images/portfolio/15/4.jpg", "./assets/images/portfolio/15/5.jpg", "./assets/images/portfolio/15/6.jpg", "./assets/images/portfolio/15/7.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/15/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/15/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/15/4.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/15/5.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/15/6.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/15/7.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/16/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/16/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/16/2.jpg", "./assets/images/portfolio/16/3.jpg", "./assets/images/portfolio/16/4.jpg", "./assets/images/portfolio/16/5.jpg", "./assets/images/portfolio/16/6.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/16/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/16/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/16/4.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/16/5.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/16/6.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/17/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/17/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/17/2.jpg", "./assets/images/portfolio/17/3.jpg", "./assets/images/portfolio/17/4.jpg", "./assets/images/portfolio/17/5.jpg", "./assets/images/portfolio/17/6.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/17/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/17/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/17/4.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/17/5.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/17/6.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/18/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/18/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/18/2.jpg", "./assets/images/portfolio/18/3.jpg", "./assets/images/portfolio/18/4.jpg", "./assets/images/portfolio/18/5.jpg", "./assets/images/portfolio/18/6.jpg", "./assets/images/portfolio/18/7.jpg", "./assets/images/portfolio/18/8.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/18/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/18/3.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/18/4.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/18/5.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/18/6.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/18/7.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/18/8.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
           </div>
           <div class="swiper-slide portfolio-slide">
-            <img loading="lazy" src="./assets/images/portfolio/19/1.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/portfolio/19/1.jpg?as=webp').default%>" alt="" />
             <div class="portfolio__btn button-circle" data-el="buton-anchor" data-anchor="price">
               <span class="button-circle__text">Хочу так</span>
             </div>
             <div
               class="portfolio__more"
               data-el="gallery-open"
-              data-gallery='["./assets/images/portfolio/19/2.jpg", "./assets/images/portfolio/19/3.jpg"]'
+              data-gallery='["<%= require('./assets/images/portfolio/19/2.jpg?as=webp').default%>", "<%= require('./assets/images/portfolio/19/3.jpg?as=webp').default%>"]'
             >
               Ще фото
             </div>
@@ -865,7 +888,7 @@
       <div class="container">
         <div class="section-consultation__row">
           <div class="col-12 col-md-8 section-consultation__image">
-            <img loading="lazy" src="./assets/images/form-image.jpg" alt="" />
+            <img loading="lazy" src="<%= require('./assets/images/form-image.jpg?as=webp').default%>" alt="" />
           </div>
           <div class="col-8 col-md-4 offset-1 offset-md-0 section-consultation__text">
             <h3 class="section-consultation__title">Замовити консультацію</h3>
@@ -892,7 +915,7 @@
       <section class="section section-steps">
         <img
           loading="lazy"
-          src="./assets/images/steps/steps-bg.png"
+          src="<%= require('./assets/images/steps/steps-bg.png?as=webp').default%>"
           alt=""
           class="section-steps__bg"
         />
@@ -904,13 +927,13 @@
           <img
             loading="lazy"
             class="offset-1 section-steps__image d-none d-md-block"
-            src="./assets/images/steps/steps-image.svg"
+            src="<%= require('./assets/images/steps/steps-image.svg').default%>"
             alt=""
           />
           <img
             loading="lazy"
             class="offset-1 section-steps__image d-block d-md-none"
-            src="./assets/images/steps/steps-image-mobile.svg"
+            src="<%= require('./assets/images/steps/steps-image-mobile.svg').default%>"
             alt=""
           />
           <div class="col-7 col-md-5 steps--left offset-1 offset-md-0">
@@ -1046,7 +1069,7 @@
                       <img
                         loading="lazy"
                         class="price-info__image"
-                        src="./assets/images/price/price-info-1.svg"
+                        src="<%= require('./assets/images/price/price-info-1.svg').default%>"
                         alt=""
                       />
                       <h4 class="price-slide__item-title price-info__title">
@@ -1059,7 +1082,7 @@
                       <img
                         loading="lazy"
                         class="price-info__image"
-                        src="./assets/images/price/price-info-2.svg"
+                        src="<%= require('./assets/images/price/price-info-2.svg').default%>"
                         alt=""
                       />
                       <h4 class="price-slide__item-title price-info__title">
@@ -1073,7 +1096,7 @@
                       <img
                         loading="lazy"
                         class="price-info__image"
-                        src="./assets/images/price/price-info-3.svg"
+                        src="<%= require('./assets/images/price/price-info-3.svg').default%>"
                         alt=""
                       />
                       <h4 class="price-slide__item-title price-info__title">
@@ -1127,7 +1150,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/1/1.jpg"
+                      src="<%= require('./assets/images/price/steps/1/1.jpg?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1158,7 +1181,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/1/2.jpg"
+                      src="<%= require('./assets/images/price/steps/1/2.jpg?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1189,7 +1212,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/1/3.jpg"
+                      src="<%= require('./assets/images/price/steps/1/3.jpg?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1275,7 +1298,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/2/1.jpg"
+                      src="<%= require('./assets/images/price/steps/2/1.jpg?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1304,7 +1327,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/2/2.jpg"
+                      src="<%= require('./assets/images/price/steps/2/2.jpg?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1391,7 +1414,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/3/1.jpg"
+                      src="<%= require('./assets/images/price/steps/3/1.jpg?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1420,7 +1443,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/3/2.jpg"
+                      src="<%= require('./assets/images/price/steps/3/2.jpg?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1449,7 +1472,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/3/3.png"
+                      src="<%= require('./assets/images/price/steps/3/3.png?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1478,7 +1501,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/3/4.jpg"
+                      src="<%= require('./assets/images/price/steps/3/4.jpg?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1562,7 +1585,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/4/1.png"
+                      src="<%= require('./assets/images/price/steps/4/1.png?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1591,7 +1614,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/4/2.png"
+                      src="<%= require('./assets/images/price/steps/4/2.png?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1620,7 +1643,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/4/3.png"
+                      src="<%= require('./assets/images/price/steps/4/3.png?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1649,7 +1672,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/4/4.jpg"
+                      src="<%= require('./assets/images/price/steps/4/4.jpg?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1678,7 +1701,7 @@
                   >
                     <img
                       loading="lazy"
-                      src="./assets/images/price/steps/4/5.jpg"
+                      src="<%= require('./assets/images/price/steps/4/5.jpg?as=webp').default%>"
                       alt=""
                       class="price-service__image"
                     />
@@ -1925,7 +1948,7 @@
                 <div class="col-3 price-box d-none d-md-flex" data-el="box">
                   <img
                     loading="lazy"
-                    src="./assets/images/price/box-top.svg"
+                    src="<%= require('./assets/images/price/box-top.svg').default%>"
                     alt=""
                     class="price-box__top"
                   />
@@ -1933,7 +1956,7 @@
                     <img
                       loading="lazy"
                       class="price-box__text-bg"
-                      src="./assets/images/price/box-confetti.svg"
+                      src="<%= require('./assets/images/price/box-confetti.svg').default%>"
                       alt=""
                     />
                     <div class="price-box__text-item"><b>10%</b> знижка</div>
@@ -1942,7 +1965,7 @@
                   </div>
                   <img
                     loading="lazy"
-                    src="./assets/images/price/box-bottom.svg"
+                    src="<%= require('./assets/images/price/box-bottom.svg').default%>"
                     alt=""
                     class="price-box__bottom"
                   />
@@ -2002,7 +2025,7 @@
                 <div class="col-12 price-box active" data-el="box">
                   <img
                     loading="lazy"
-                    src="./assets/images/price/box-top.svg"
+                    src="<%= require('./assets/images/price/box-top.svg').default%>"
                     alt=""
                     class="price-box__top"
                   />
@@ -2010,7 +2033,7 @@
                     <img
                       loading="lazy"
                       class="price-box__text-bg"
-                      src="./assets/images/price/box-confetti.svg"
+                      src="<%= require('./assets/images/price/box-confetti.svg').default%>"
                       alt=""
                     />
                     <div class="price-box__text-item"><b>10%</b> знижка</div>
@@ -2019,7 +2042,7 @@
                   </div>
                   <img
                     loading="lazy"
-                    src="./assets/images/price/box-bottom.svg"
+                    src="<%= require('./assets/images/price/box-bottom.svg').default%>"
                     alt=""
                     class="price-box__bottom"
                   />
@@ -2511,12 +2534,12 @@
     </section>
 
     <footer class="footer" id="contacts">
-      <img loading="lazy" class="footer-image" src="./assets/images/footer-bg.png" alt="" />
+      <img loading="lazy" class="footer-image" src="<%= require('./assets/images/footer-bg.png?as=webp').default%>" alt="" />
       <div class="container">
         <div class="row align-items-center justify-content-between">
           <div class="col-8 col-md-3 offset-1 offset-md-0">
             <a href="/" class="footer-logo">
-              <img loading="lazy" src="./assets/images/logo.svg" alt="Wood Expert" />
+              <img loading="lazy" src="<%= require('./assets/images/logo.svg').default%>" alt="Wood Expert" />
             </a>
           </div>
           <div class="col-8 footer-menu d-none d-md-block">
@@ -2548,14 +2571,14 @@
           <div class="col-11 col-md-3 footer-contacts">
             <a href="tel:+38 (096) 631-59-19" class="footer-tel">+38 (096) 631-59-19</a>
             <div class="footer-social">
-              <a href="#" class="footer-social__item">
-                <img src="./assets/images/viber-icon.svg" alt="" />
+              <a href="viber://chat/?number=%2B380933077550" class="footer-social__item">
+                <img src="<%= require('./assets/images/viber-icon.svg').default%>" alt="" />
               </a>
-              <a href="#" class="footer-social__item">
-                <img src="./assets/images/telegram-icon.svg" alt="" />
+              <a href="tg://resolve?domain=WoodExpertUA" class="footer-social__item">
+                <img src="<%= require('./assets/images/telegram-icon.svg').default%>" alt="" />
               </a>
-              <a href="#" class="footer-social__item">
-                <img src="./assets/images/tel-icon.svg" alt="" />
+              <a href="tel:380933077550" class="footer-social__item">
+                <img src="<%= require('./assets/images/tel-icon.svg').default%>" alt="" />
               </a>
             </div>
           </div>
