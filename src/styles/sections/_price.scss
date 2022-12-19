@@ -170,6 +170,15 @@
     @media screen and (max-width: 768px) {
     }
 
+    .price-slide__item-btn {
+      svg {
+        path {
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+        }
+      }
+    }
+
     &.selected {
       &::before {
         height: 110%;
@@ -177,6 +186,12 @@
 
       .price-slide__item-btn {
         opacity: 1;
+
+        svg {
+          path {
+            animation: dash 0.7s ease 1 forwards;
+          }
+        }
       }
     }
 
@@ -599,5 +614,14 @@
         margin: 50px 0;
       }
     }
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: -50;
+  }
+  to {
+    stroke-dashoffset: 0;
   }
 }

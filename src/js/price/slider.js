@@ -4,14 +4,19 @@ import { createPagination } from './pagination';
 Swiper.use([Pagination, Autoplay, EffectFade, Navigation]);
 
 export const createPriceSlider = () => {
-  const slider = new Swiper('.section-price__slider');
+  const slider = new Swiper('.section-price__slider', {
+    delay: 3000,
+    allowTouchMove: false,
+  });
   const prevEls = Array.from(document.querySelectorAll('[data-el="price-prev"]'));
-  const startButtonEl = document.querySelector('[data-el="price-start"]');
+  const startButtonEls = Array.from(document.querySelectorAll('[data-el="price-start"]'));
   const { setCurrentPagination } = createPagination();
 
   const next = () => {
-    slider.slideNext();
-    setCurrentPagination(slider.activeIndex);
+    setTimeout(() => {
+      slider.slideNext(1000);
+      setCurrentPagination(slider.activeIndex);
+    }, 700);
   };
 
   const prev = () => {
@@ -23,7 +28,13 @@ export const createPriceSlider = () => {
     prevEl.addEventListener('click', prev);
   });
 
-  startButtonEl.addEventListener('click', next);
+  console.log(startButtonEls);
+  startButtonEls.forEach((startButtonEl) => {
+    startButtonEl.addEventListener('click', () => {
+      console.log('start click');
+      next();
+    });
+  });
 
   return { prev, next };
 };
