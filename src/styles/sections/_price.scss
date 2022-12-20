@@ -180,8 +180,10 @@
     }
 
     &.selected {
-      &::before {
-        height: 110%;
+      @media screen and (min-width: 1024px) {
+        &::before {
+          height: 110%;
+        }
       }
 
       .price-slide__item-btn {
@@ -195,13 +197,21 @@
       }
     }
 
-    &:hover {
-      &::before {
-        height: 110%;
-      }
+    @media (hover: hover) {
+      &:hover {
+        &::before {
+          height: 110%;
+        }
 
-      .price-slide__item-btn {
-        opacity: 1;
+        .price-slide__item-btn {
+          opacity: 1;
+
+          svg {
+            path {
+              animation: dash 0.7s ease 1 forwards;
+            }
+          }
+        }
       }
     }
 
@@ -619,7 +629,7 @@
 
 @keyframes dash {
   from {
-    stroke-dashoffset: -50;
+    stroke-dashoffset: -100;
   }
   to {
     stroke-dashoffset: 0;

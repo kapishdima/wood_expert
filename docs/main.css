@@ -5819,8 +5819,10 @@
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
 }
-.section-price .price-service.selected::before {
-  height: 110%;
+@media screen and (min-width: 1024px) {
+  .section-price .price-service.selected::before {
+    height: 110%;
+  }
 }
 .section-price .price-service.selected .price-slide__item-btn {
   opacity: 1;
@@ -5829,11 +5831,17 @@
   -webkit-animation: dash 0.7s ease 1 forwards;
           animation: dash 0.7s ease 1 forwards;
 }
-.section-price .price-service:hover::before {
-  height: 110%;
-}
-.section-price .price-service:hover .price-slide__item-btn {
-  opacity: 1;
+@media (hover: hover) {
+  .section-price .price-service:hover::before {
+    height: 110%;
+  }
+  .section-price .price-service:hover .price-slide__item-btn {
+    opacity: 1;
+  }
+  .section-price .price-service:hover .price-slide__item-btn svg path {
+    -webkit-animation: dash 0.7s ease 1 forwards;
+            animation: dash 0.7s ease 1 forwards;
+  }
 }
 .section-price .price-service::before {
   content: "";
@@ -6204,7 +6212,7 @@
 
 @-webkit-keyframes dash {
   from {
-    stroke-dashoffset: -50;
+    stroke-dashoffset: -100;
   }
   to {
     stroke-dashoffset: 0;
@@ -6213,7 +6221,7 @@
 
 @keyframes dash {
   from {
-    stroke-dashoffset: -50;
+    stroke-dashoffset: -100;
   }
   to {
     stroke-dashoffset: 0;
